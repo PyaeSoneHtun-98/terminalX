@@ -11,9 +11,13 @@ export const LanguageSwitch = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => toggleLanguage(language === 'EN' ? 'MM' : 'EN')}
-                className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-lg text-white hover:bg-white/20 transition-colors duration-300"
+                className="px-3 py-1 cursor-pointer bg-white/10 backdrop-blur-sm rounded-lg text-white hover:bg-white/20 transition-colors duration-300"
             >
-                {language === 'EN' ? 'မြန်မာ' : 'ENG'}
+                <img 
+                    src={language === 'EN' ? 'https://flagcdn.com/mm.svg' : 'https://flagcdn.com/us.svg'} 
+                    alt={language === 'EN' ? 'Myanmar' : 'English'} 
+                    className="flag-icon size-6" 
+                />
             </motion.button>
         </div>
     );

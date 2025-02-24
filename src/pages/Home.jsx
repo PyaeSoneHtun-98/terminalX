@@ -18,7 +18,7 @@ export function Home() {
       height: '100vh', 
       backgroundColor: '#060606', 
       position: 'relative',
-      backgroundImage: 'url(./src/assets/cloud.jpg)',
+      backgroundImage: 'url(./assets/cloud.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -34,7 +34,7 @@ export function Home() {
       <div className="absolute bottom-0 left-0 w-full pb-20">
         <button
           onClick={() => navigate('/me')}
-          className="block mx-auto mb-24 px-6 py-3 text-white rounded-lg attractive-button"
+          className="block mx-auto mb-24 px-6 py-3 text-white rounded-lg text-sm attractive-button"
         >
           {langData.hero.viewMore}
         </button>

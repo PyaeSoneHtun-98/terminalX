@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import * as THREE from 'three'
 
 export function Computer() {
-  const computer = useGLTF('./src/assets/computer.glb')
+  const computer = useGLTF('./assets/computer.glb')
   const { scene, animations } = computer
 
   useEffect(() => {

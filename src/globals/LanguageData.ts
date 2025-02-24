@@ -14,7 +14,7 @@ export const langDataEN = {
         subtitle: "Working With Me",
         description: "Ready to bring your vision to life? I offer a streamlined collaboration process that ensures your project's success.",
         startProject: "Start Your Project",
-        tools: "Tools & Software"
+        tools: "Tools I Use"
     },
     services: {
         title: "SERVICES",
@@ -50,7 +50,7 @@ export const langDataEN = {
         title: "CLIENT REVIEWS"
     },
     clients: {
-        title: "OUR CLIENTS"
+        title: "MY CLIENTS"
     },
     modal: {
         title: "Project Requirements",
@@ -74,8 +74,8 @@ export const langDataMM = {
         title: "ကျွန်ုပ်အကြောင်း",
         subtitle: "ကျွန်ုပ်နှင့်အတူ အလုပ်လုပ်ခြင်း",
         description: "သင့်အိပ်မက်ကို အသက်သွင်းရန် အဆင်သင့်ဖြစ်ပါပြီလား? သင့်စီမံကိန်း အောင်မြင်စေရန် လွယ်ကူချောမွေ့သော ပူးပေါင်းဆောင်ရွက်မှု လုပ်ငန်းစဉ်ကို ကျွန်ုပ်ပေးဆောင်ပါသည်။",
-        startProject: "စီမံကိန်း စတင်ရန်",
-        tools: "ကိရိယာများနှင့် ဆော့ဖ်ဝဲများ"
+        startProject: "အလုပ်အပ်ရန်",
+        tools: "အသုံးပြုသော ဆော့ဖ်ဝဲများ"
     },
     services: {
         title: "ဝန်ဆောင်မှုများ",
@@ -108,10 +108,10 @@ export const langDataMM = {
         getInTouch: "ဆက်သွယ်ရန်"
     },
     reviews: {
-        title: "အမှုသည်များ၏ သုံးသပ်ချက်များ"
+        title: "Clientများ၏ သုံးသပ်ချက်များ"
     },
     clients: {
-        title: "ကျွန်ုပ်တို့၏ အမှုသည်များ"
+        title: "ကျွန်ုပ်၏ Clientများ"
     },
     modal: {
         title: "စီမံကိန်း လိုအပ်ချက်များ",

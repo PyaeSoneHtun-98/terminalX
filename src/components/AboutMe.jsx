@@ -72,7 +72,7 @@ export function AboutMe() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300"
+              className="mt-6 px-6 py-2 attractive-button rounded-lg cursor-pointer"
               onClick={() => setIsModalOpen(true)}
             >
               {langData.about.startProject}

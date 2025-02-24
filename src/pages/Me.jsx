@@ -75,7 +75,7 @@ export function Me() {
           loop
           playsInline
         >
-          <source src="./src/assets/edit.mp4" type="video/mp4" />
+          <source src="./assets/edit.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -133,14 +133,14 @@ export function Me() {
         </div>
 
         {/* Get in Touch Button */}
-        <motion.div 
+        {/* <motion.div 
           variants={itemVariants}
           className="text-center mt-12"
         >
           <button className="px-8 py-3 text-white rounded-lg text-lg font-semibold attractive-button">
             {langData.services.getInTouch}
           </button>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       {/* Reviews Section */}

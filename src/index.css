@@ -51,14 +51,14 @@
 }
 
 .attractive-button {
-  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
   box-shadow: 0 4px 15px rgba(0, 198, 255, 0.4);
   transform: translateY(0);
   transition: all 0.3s ease;
 }
 
 .attractive-button:hover {
-  background: linear-gradient(135deg, #00b4e6 0%, #0066e6 100%);
+  background: linear-gradient(135deg, #ff6a88 0%, #ff9a44 100%);
   box-shadow: 0 8px 25px rgba(0, 198, 255, 0.5);
   transform: translateY(-2px);
 }
