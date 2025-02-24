@@ -40,7 +40,7 @@ const Card = ({ id, url, setCards, cards, index }) => {
         x,
         rotate,
         opacity,
-        top: `${index * 4}px`,
+        top: `${index * 2}px`,
         left: `calc(50% + ${index * 2}px)`,
         transform: `translateX(-50%) rotate(${index * 0.5}deg)`,
         zIndex: index,

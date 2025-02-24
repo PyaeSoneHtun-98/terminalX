@@ -37,7 +37,7 @@ export function Me() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
+        duration: 0.8
       }
     },
     viewport: { once: true, amount: 0.1 }
@@ -49,7 +49,7 @@ export function Me() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
+        duration: 0.8
       }
     },
     viewport: { once: true, amount: 0.1 }
@@ -61,7 +61,7 @@ export function Me() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
+        duration: 0.8
       }
     },
     viewport: { once: true, amount: 0.1 }

@@ -1,11 +1,28 @@
 import { useGLTF } from '@react-three/drei'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { useSpring, animated } from '@react-spring/three'
 
 export function Computer() {
   const computer = useGLTF('./assets/computer.glb')
   const { scene, animations } = computer
+
+  const [scale, setScale] = useState(1.5) // Default scale
+
+  useEffect(() => {
+    const updateScale = () => {
+      if (window.innerWidth < 768) {
+        setScale(1) // Reduce size on mobile (screen width < 768px)
+      } else {
+        setScale(1.5) // Default size for larger screens
+      }
+    }
+
+    updateScale() // Initial check
+    window.addEventListener('resize', updateScale) // Listen for window resize
+
+    return () => window.removeEventListener('resize', updateScale)
+  }, [])
 
   const spring = useSpring({
     from: { y: 4 },
@@ -25,7 +42,7 @@ export function Computer() {
     })
 
     const animate = () => {
-      mixer.update(0.008) // Reduced from 0.016 to 0.008 for slower animation
+      mixer.update(0.008) // Slower animation speed
       requestAnimationFrame(animate)
     }
     animate()
@@ -38,7 +55,7 @@ export function Computer() {
   return (
     <animated.primitive 
       object={scene} 
-      scale={1.5} 
+      scale={scale}  // Dynamic scale based on screen width
       position-y={spring.y}
       position-x={0}
       position-z={0}
