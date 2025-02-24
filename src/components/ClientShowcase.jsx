@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
+import {FaXTwitter} from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 import { motion } from 'framer-motion'
 import { useLanguageContext } from '../globals/ContextProvider'
@@ -15,7 +16,7 @@ export function ClientShowcase() {
           {[...Array(6)].map((_, index) => (
             <img
               key={index}
-              src="./src/assets/logo.png"
+              src="./assets/logo.png"
               alt="Client Logo"
               className="h-20 w-auto object-contain"
             />
@@ -23,7 +24,7 @@ export function ClientShowcase() {
           {[...Array(6)].map((_, index) => (
             <img
               key={`duplicate-${index}`}
-              src="./src/assets/logo.png"
+              src="./assets/logo.png"
               alt="Client Logo"
               className="h-20 w-auto object-contain"
             />
@@ -62,18 +63,18 @@ export function ClientShowcase() {
           <FaYoutube size={20} />
         </motion.a>
         <motion.a 
-          href="https://twitter.com" 
+          href="https://x.com" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-white hover:text-blue-400 transition-colors duration-300"
+          className="text-white transition-colors duration-300"
           whileHover={{ scale: 1.2, rotate: 10 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          <FaTwitter size={20} />
+          <FaXTwitter size={20} />
         </motion.a>
         <motion.a 
-          href="mailto:contact@example.com" 
-          className="text-white hover:text-orange-500 transition-colors duration-300"
+          href="mailto:pyaesonehtun@969.com" 
+          className="text-white hover:text-green-500 transition-colors duration-300"
           whileHover={{ scale: 1.2, rotate: 10 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >

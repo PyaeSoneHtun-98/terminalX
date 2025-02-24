@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import { Suspense } from 'react'
 import { Computer } from '../components/Computer'
 import { motion } from 'framer-motion'
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
+import {FaXTwitter} from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 import { useLanguageContext } from '../globals/ContextProvider'
 
@@ -70,18 +71,18 @@ export function Home() {
             <FaYoutube size={20} />
           </motion.a>
           <motion.a 
-            href="https://twitter.com" 
+            href="https://x.com" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-white hover:text-blue-400 transition-colors duration-300"
+            className="text-white transition-colors duration-300"
             whileHover={{ scale: 1.2, rotate: 10 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <FaTwitter size={20} />
+            <FaXTwitter size={20} />
           </motion.a>
           <motion.a 
             href="mailto:contact@example.com" 
-            className="text-white hover:text-yellow-500 transition-colors duration-300"
+            className="text-white hover:text-green-500 transition-colors duration-300"
             whileHover={{ scale: 1.2, rotate: 10 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >

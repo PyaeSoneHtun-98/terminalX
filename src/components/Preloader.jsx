@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Lottie from 'lottie-react'
-import preloaderData from '../assets/preloader.json'
+// import preloaderData from '../assets/preloader.json'
+import preloaderData from '../../public/assets/preloader.json'
 
 export function Preloader() {
   const [percentage, setPercentage] = useState(0)

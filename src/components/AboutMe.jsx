@@ -9,10 +9,10 @@ export function AboutMe() {
   const { langData } = useLanguageContext()
   const modalData = {
     title: langData.modal.title,
-    imageSrc: "./src/assets/cloud.jpg",
+    imageSrc: "./assets/cloud.jpg",
     languages: ["Brief", "Timeline", "Budget"],
     description: langData.modal.description,
-    demoLink: "mailto:contact@example.com"
+    demoLink: "mailto:pyaesonehtun969@gmail.com"
   }
 
   const containerVariants = {
@@ -39,7 +39,7 @@ export function AboutMe() {
   }
 
   const tools = [
-    { icon: SiAdobepremierepro, name: 'Adobe Premiere Pro', color: 'text-purple-600' },
+    { icon: SiAdobepremierepro, name: 'Premiere Pro', color: 'text-purple-600' },
     { icon: SiAdobeaftereffects, name: 'After Effects', color: 'text-purple-400' },
     { icon: SiAdobephotoshop, name: 'Photoshop', color: 'text-blue-500' },
     { icon: SiBlender, name: 'Blender', color: 'text-orange-500' },
