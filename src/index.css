@@ -51,19 +51,27 @@
 }
 
 .attractive-button {
-  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
-  box-shadow: 0 4px 15px rgba(0, 198, 255, 0.4);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  color: #222; /* Dark text for contrast */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2), 0 0 15px rgba(0, 198, 255, 0.4);
   transform: translateY(0);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 
 .attractive-button:hover {
-  background: linear-gradient(135deg, #ff6a88 0%, #ff9a44 100%);
-  box-shadow: 0 8px 25px rgba(0, 198, 255, 0.5);
+  background: linear-gradient(135deg, #f8f8f8 0%, #e0e0e0 100%);
+  color: #000;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3), 0 0 25px rgba(0, 198, 255, 0.6);
   transform: translateY(-2px);
 }
 
 .attractive-button:active {
   transform: translateY(1px);
-  box-shadow: 0 2px 10px rgba(0, 198, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.15), 0 0 10px rgba(0, 198, 255, 0.3);
 }

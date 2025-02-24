@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import SwipeCards from '../components/SwipeCard'
 import { useLanguageContext } from '../globals/ContextProvider'
 import { useNavigate } from 'react-router-dom'
+import { FiArrowLeft } from "react-icons/fi";
 
 export function Me() {
   const { langData } = useLanguageContext()
@@ -70,7 +71,7 @@ export function Me() {
     <div className="min-h-screen bg-[#060606] text-white">
       <button onClick={() => navigate(-1)}
         className='absolute top-2 left-2 z-50 cursor-pointer'>
-         Back
+          <FiArrowLeft className="text-white text-2xl" />
       </button>
       {/* Video Section */}
       <div className="w-full max-w-none mx-auto h-[150px] md:h-[400px]">

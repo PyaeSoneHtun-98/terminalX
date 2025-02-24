@@ -32,10 +32,10 @@ export function Home() {
           <OrbitControls enableZoom={false} />
         </Suspense>
       </Canvas>
-      <div className="absolute bottom-0 left-0 w-full pb-20">
+      <div className="absolute bottom-0 left-0 w-full pb-6">
         <button
           onClick={() => navigate('/me')}
-          className="block mx-auto mb-24 px-6 py-3 text-white rounded-lg text-sm attractive-button"
+          className="block mx-auto mb-24 px-4 py-1 text-white rounded-lg text-sm attractive-button"
         >
           {langData.hero.viewMore}
         </button>

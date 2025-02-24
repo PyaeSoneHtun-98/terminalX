@@ -1,10 +1,21 @@
 import { useGLTF } from '@react-three/drei'
 import { useEffect } from 'react'
 import * as THREE from 'three'
+import { useSpring, animated } from '@react-spring/three'
 
 export function Computer() {
   const computer = useGLTF('./assets/computer.glb')
   const { scene, animations } = computer
+
+  const spring = useSpring({
+    from: { y: 4 },
+    to: { y: -0.5 },
+    config: {
+      mass: 2,
+      tension: 200,
+      friction: 15,
+    }
+  })
 
   useEffect(() => {
     const mixer = new THREE.AnimationMixer(scene)
@@ -24,5 +35,13 @@ export function Computer() {
     }
   }, [scene, animations])
 
-  return <primitive object={scene} scale={1.5} position={[0, -0.5, 0]} />
+  return (
+    <animated.primitive 
+      object={scene} 
+      scale={1.5} 
+      position-y={spring.y}
+      position-x={0}
+      position-z={0}
+    />
+  )
 }

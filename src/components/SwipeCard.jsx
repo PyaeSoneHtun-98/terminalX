@@ -50,7 +50,7 @@ const Card = ({ id, url, setCards, cards, index }) => {
           : "0 4px 6px -1px rgb(0 0 0 / 0.1)",
       }}
       initial={{ scale: 1, opacity: 1 }}
-      animate={{ scale: isFront ? 1 : 0.98 - index * 0.02 }}
+      animate={{ scale: isFront ? 1 : 1.1 - index * 0.01 }}
       exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.3 } }}
       drag={isFront ? "x" : false}
       dragConstraints={{ left: 0, right: 0 }}
