@@ -4,15 +4,8 @@ import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-mo
 const SwipeCards = () => {
   const [cards, setCards] = useState(cardData);
 
-  // Reset cards when all are swiped
-  React.useEffect(() => {
-    if (cards.length === 0) {
-      setCards(cardData);
-    }
-  }, [cards]);
-
   return (
-    <div className="relative h-[400px] md:h-[500px] w-full flex items-center justify-center overflow-hidden">
+    <div className="relative h-[400px] w-full flex items-center justify-center">
       <AnimatePresence>
         {cards.map((card, index) => (
           <Card key={card.id} id={card.id} url={card.url} setCards={setCards} cards={cards} index={index} />
@@ -32,13 +25,8 @@ const Card = ({ id, url, setCards, cards, index }) => {
   const handleDragEnd = (event, info) => {
     if (Math.abs(info.point.x) > 100) {
       setCards((prev) => {
-        const newCards = [...prev];
-        const cardIndex = newCards.findIndex(card => card.id === id);
-        if (cardIndex !== -1) {
-          const [movedCard] = newCards.splice(cardIndex, 1);
-          newCards.unshift(movedCard);
-        }
-        return newCards;
+        const updatedCards = prev.filter((card) => card.id !== id); // Remove the swiped card
+        return [{ id, url }, ...updatedCards]; // Add it to the bottom
       });
     }
   };
@@ -47,17 +35,19 @@ const Card = ({ id, url, setCards, cards, index }) => {
     <motion.img
       src={url}
       alt="Card"
-      className="absolute h-48 md:h-96 w-[280px] md:w-72 rounded-lg bg-white object-cover hover:cursor-grab active:cursor-grabbing"
+      className="absolute -translate-x-36 h-80 w-64 md:h-96 md:w-72 rounded-lg bg-white object-cover hover:cursor-grab active:cursor-grabbing"
       style={{
         x,
         rotate,
         opacity,
         top: `${index * 4}px`,
-        left: `calc(50% + ${index % 2 === 0 ? -index * 4 : index * 4}px)`,
-        transform: `translateX(-50%) rotate(${index % 2 === 0 ? -index * 0.5 : index * 0.5}deg)`,
+        left: `calc(50% + ${index * 2}px)`,
+        transform: `translateX(-50%) rotate(${index * 0.5}deg)`,
         zIndex: index,
         transition: "0.125s transform",
-        boxShadow: isFront ? "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5)" : "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+        boxShadow: isFront
+          ? "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5)"
+          : "0 4px 6px -1px rgb(0 0 0 / 0.1)",
       }}
       initial={{ scale: 1, opacity: 1 }}
       animate={{ scale: isFront ? 1 : 0.98 - index * 0.02 }}
@@ -73,36 +63,12 @@ const Card = ({ id, url, setCards, cards, index }) => {
 export default SwipeCards;
 
 const cardData = [
-  {
-    id: 1,
-    url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 2,
-    url: "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    url: "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 4,
-    url: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2224&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 5,
-    url: "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 6,
-    url: "https://images.unsplash.com/photo-1570464197285-9949814674a7?q=80&w=2273&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 7,
-    url: "https://images.unsplash.com/photo-1578608712688-36b5be8823dc?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 8,
-    url: "https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+  { id: 1, url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2370&auto=format&fit=crop" },
+  { id: 2, url: "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=2235&auto=format&fit=crop" },
+  { id: 3, url: "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=2342&auto=format&fit=crop" },
+  { id: 4, url: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2224&auto=format&fit=crop" },
+  { id: 5, url: "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?q=80&w=2340&auto=format&fit=crop" },
+  { id: 6, url: "https://images.unsplash.com/photo-1570464197285-9949814674a7?q=80&w=2273&auto=format&fit=crop" },
+  { id: 7, url: "https://images.unsplash.com/photo-1578608712688-36b5be8823dc?q=80&w=2187&auto=format&fit=crop" },
+  { id: 8, url: "https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?q=80&w=2340&auto=format&fit=crop" },
 ];

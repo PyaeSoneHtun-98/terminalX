@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { SiAdobepremierepro, SiAdobeaftereffects, SiAdobephotoshop, SiBlender, SiAdobeillustrator, SiCinema4D } from 'react-icons/si'
 import SpringModal from './Modal'
+import { useLanguageContext } from '../globals/ContextProvider'
 
 export function AboutMe() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const { langData } = useLanguageContext()
   const modalData = {
-    title: "Project Requirements",
+    title: langData.modal.title,
     imageSrc: "./src/assets/cloud.jpg",
     languages: ["Brief", "Timeline", "Budget"],
-    description: "To start your project, please provide:\n\n• Clear project objectives and goals\n• Timeline expectations\n• Budget range\n• Reference materials (if any)\n\nI'll review your requirements and respond within 24 hours.",
+    description: langData.modal.description,
     demoLink: "mailto:contact@example.com"
   }
 
@@ -50,22 +52,22 @@ export function AboutMe() {
       variants={containerVariants}
       initial="initial"
       whileInView="whileInView"
-      className="w-full py-16 bg-[#1a2436]"
+      className="w-full py-16 bg-[#060606]"
     >
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2
           variants={itemVariants}
           className="text-4xl font-bold text-center mb-12 text-white"
         >
-          ABOUT ME
+          {langData.about.title}
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* About Text */}
           <motion.div variants={itemVariants} className="space-y-6">
-            <h3 className="text-2xl font-semibold text-white">Working With Me</h3>
+            <h3 className="text-2xl font-semibold text-white">{langData.about.subtitle}</h3>
             <p className="text-gray-300 leading-relaxed">
-              Ready to bring your vision to life? I offer a streamlined collaboration process that ensures your project's success.
+              {langData.about.description}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -73,13 +75,13 @@ export function AboutMe() {
               className="mt-6 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300"
               onClick={() => setIsModalOpen(true)}
             >
-              Start Your Project
+              {langData.about.startProject}
             </motion.button>
           </motion.div>
 
           {/* Tools & Skills */}
           <motion.div variants={itemVariants} className="space-y-6">
-            <h3 className="text-2xl font-semibold text-white">Tools & Software</h3>
+            <h3 className="text-2xl font-semibold text-white">{langData.about.tools}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
               {tools.map((tool, index) => (
                 <motion.div

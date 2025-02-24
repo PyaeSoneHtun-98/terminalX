@@ -2,12 +2,15 @@ import React from 'react'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { motion } from 'framer-motion'
+import { useLanguageContext } from '../globals/ContextProvider'
 
 export function ClientShowcase() {
+  const { langData } = useLanguageContext()
+
   return (
     <div className="w-full overflow-hidden py-8">
-      <h2 className="text-4xl font-bold text-center mb-12 text-white">OUR CLIENTS</h2>
-      <div className="relative w-full overflow-hidden bg-[#1a2436] py-2 border-y-2 border-white">
+      <h2 className="text-4xl font-bold text-center mb-12 text-white">{langData.clients.title}</h2>
+      <div className="relative w-full overflow-hidden bg-[#060606] py-2 border-y-2 border-white">
         <div className="flex space-x-8 animate-scroll whitespace-nowrap">
           {[...Array(6)].map((_, index) => (
             <img
@@ -32,7 +35,7 @@ export function ClientShowcase() {
           href="https://facebook.com" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-gray-400 hover:text-blue-500 transition-colors duration-300"
+          className="text-white hover:text-blue-500 transition-colors duration-300"
           whileHover={{ scale: 1.2, rotate: 10 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
@@ -42,7 +45,7 @@ export function ClientShowcase() {
           href="https://instagram.com" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-gray-400 hover:text-pink-500 transition-colors duration-300"
+          className="text-white hover:text-pink-500 transition-colors duration-300"
           whileHover={{ scale: 1.2, rotate: 10 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
@@ -52,7 +55,7 @@ export function ClientShowcase() {
           href="https://youtube.com" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-gray-400 hover:text-red-500 transition-colors duration-300"
+          className="text-white hover:text-red-500 transition-colors duration-300"
           whileHover={{ scale: 1.2, rotate: 10 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
@@ -62,7 +65,7 @@ export function ClientShowcase() {
           href="https://twitter.com" 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+          className="text-white hover:text-blue-400 transition-colors duration-300"
           whileHover={{ scale: 1.2, rotate: 10 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
@@ -70,7 +73,7 @@ export function ClientShowcase() {
         </motion.a>
         <motion.a 
           href="mailto:contact@example.com" 
-          className="text-gray-400 hover:text-yellow-500 transition-colors duration-300"
+          className="text-white hover:text-orange-500 transition-colors duration-300"
           whileHover={{ scale: 1.2, rotate: 10 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >

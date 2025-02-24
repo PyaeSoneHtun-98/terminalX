@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Me } from './pages/Me'
 import { Preloader } from './components/Preloader'
+import { ContextProvider } from './globals/ContextProvider.jsx'
+import { LanguageSwitch } from './components/LanguageSwitch.jsx'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -17,13 +19,16 @@ function App() {
   }, [])
 
   return (
-    <Router>
-      {loading && <Preloader />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/me" element={<Me />} />
-      </Routes>
-    </Router>
+    <ContextProvider>
+      <Router>
+        {loading && <Preloader />}
+        <LanguageSwitch />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/me" element={<Me />} />
+        </Routes>
+      </Router>
+    </ContextProvider>
   )
 }
 

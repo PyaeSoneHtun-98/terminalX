@@ -2,8 +2,11 @@ import { ClientShowcase } from '../components/ClientShowcase'
 import { AboutMe } from '../components/AboutMe'
 import { motion } from 'framer-motion'
 import SwipeCards from '../components/SwipeCard'
+import { useLanguageContext } from '../globals/ContextProvider'
 
 export function Me() {
+  const { langData } = useLanguageContext()
+
   const containerVariants = {
     initial: { opacity: 0 },
     whileInView: {
@@ -62,11 +65,11 @@ export function Me() {
   }
 
   return (
-    <div className="min-h-screen bg-[#111827] text-white">
+    <div className="min-h-screen bg-[#060606] text-white">
       {/* Video Section */}
       <div className="w-full max-w-none mx-auto h-[150px] md:h-[400px]">
         <video
-          className="w-full h-[150px] md:h-[400px] object-cover"
+          className="w-full h-[200px] md:h-[400px] object-cover"
           autoPlay
           muted
           loop
@@ -94,39 +97,37 @@ export function Me() {
           viewport={{ once: true, amount: 0.1 }}
           className="text-4xl font-bold text-center mb-16"
         >
-          SERVICES
+          {langData.services.title}
         </motion.h2>
         
         <div className="grid grid-cols-3 gap-2 md:gap-8">
           {/* Brand Identity */}
           <motion.div variants={leftVariants} className="space-y-2 md:space-y-4">
-            <h3 className="text-lg md:text-xl font-semibold text-center border-b border-white pb-2">BRAND IDENTITY</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-center border-b border-white pb-2">{langData.services.brandIdentity.title}</h3>
             <ul className="space-y-1 md:space-y-2">
-              <li className="text-center text-sm md:text-base">- Logo Design</li>
-              <li className="text-center text-sm md:text-base">- Identity Build</li>
-              <li className="text-center text-sm md:text-base">- Creative Direction</li>
-              <li className="text-center text-sm md:text-base">- Social Design</li>
+              {langData.services.brandIdentity.items.map((item, index) => (
+                <li key={index} className="text-center text-sm md:text-base">- {item}</li>
+              ))}
             </ul>
           </motion.div>
 
           {/* Video Production */}
           <motion.div variants={topVariants} className="space-y-2 md:space-y-4">
-            <h3 className="text-lg md:text-xl font-semibold text-center border-b border-white pb-2">VIDEO PRODUCTION</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-center border-b border-white pb-2">{langData.services.videoProduction.title}</h3>
             <ul className="space-y-1 md:space-y-2">
-              <li className="text-center text-sm md:text-base">- Marketing Videos</li>
-              <li className="text-center text-sm md:text-base">- Television Ads</li>
-              <li className="text-center text-sm md:text-base">- Documentaries</li>
-              <li className="text-center text-sm md:text-base">- Short Film</li>
+              {langData.services.videoProduction.items.map((item, index) => (
+                <li key={index} className="text-center text-sm md:text-base">- {item}</li>
+              ))}
             </ul>
           </motion.div>
 
           {/* Animation/VFX */}
           <motion.div variants={rightVariants} className="space-y-2 md:space-y-4">
-            <h3 className="text-lg md:text-xl font-semibold text-center border-b border-white pb-2">ANIMATION / VFX</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-center border-b border-white pb-2">{langData.services.animation.title}</h3>
             <ul className="space-y-1 md:space-y-2">
-              <li className="text-center text-sm md:text-base">- 2D Animation</li>
-              <li className="text-center text-sm md:text-base">- 3D Animation</li>
-              <li className="text-center text-sm md:text-base">- Compositing</li>
+              {langData.services.animation.items.map((item, index) => (
+                <li key={index} className="text-center text-sm md:text-base">- {item}</li>
+              ))}
             </ul>
           </motion.div>
         </div>
@@ -137,13 +138,13 @@ export function Me() {
           className="text-center mt-12"
         >
           <button className="px-8 py-3 text-white rounded-lg text-lg font-semibold attractive-button">
-            Get in Touch
+            {langData.services.getInTouch}
           </button>
         </motion.div>
       </motion.div>
 
       {/* Reviews Section */}
-      <div className="pt-4 bg-[#111827]">
+      <div className="pt-4 bg-[#060606]">
         <motion.h2
           variants={itemVariants}
           initial="initial"
@@ -151,7 +152,7 @@ export function Me() {
           viewport={{ once: true, amount: 0.1 }}
           className="text-4xl font-bold text-center text-white mb-12"
         >
-          CLIENT REVIEWS
+          {langData.reviews.title}
         </motion.h2>
         <SwipeCards />
       </div>
