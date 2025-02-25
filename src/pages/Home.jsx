@@ -14,7 +14,7 @@ export function Home() {
   const { langData } = useLanguageContext()
 
   return (
-    <div style={{ 
+    <div className='overflow-x-hidden' style={{ 
       width: '100vw', 
       height: '100vh', 
       backgroundColor: '#060606', 

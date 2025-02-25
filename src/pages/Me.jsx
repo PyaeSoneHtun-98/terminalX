@@ -68,7 +68,7 @@ export function Me() {
   }
 
   return (
-    <div className="min-h-screen bg-[#060606] text-white">
+    <div className="min-h-screen bg-[#060606] text-white overflow-x-hidden">
       <button onClick={() => navigate(-1)}
         className='absolute top-2 left-2 z-50 cursor-pointer'>
           <FiArrowLeft className="text-white text-2xl" />

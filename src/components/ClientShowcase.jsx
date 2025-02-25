@@ -11,7 +11,7 @@ export function ClientShowcase() {
   return (
     <div className="w-full overflow-hidden py-8">
       <h2 className="text-4xl font-bold text-center mb-12 text-white">{langData.clients.title}</h2>
-      <div className="relative w-full overflow-hidden bg-[#060606] py-2 border-y-2 border-white">
+      <div className="relative w-full overflow-hidden bg-gray-500 py-2 border-y-2 border-white">
         <div className="flex space-x-8 animate-scroll whitespace-nowrap">
           {[...Array(6)].map((_, index) => (
             <img

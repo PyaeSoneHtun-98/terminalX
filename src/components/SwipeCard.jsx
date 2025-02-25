@@ -35,7 +35,7 @@ const Card = ({ id, url, setCards, cards, index }) => {
     <motion.img
       src={url}
       alt="Card"
-      className="absolute -translate-x-36 h-80 w-64 md:h-96 md:w-72 rounded-lg bg-white object-cover hover:cursor-grab active:cursor-grabbing"
+      className="absolute -translate-x-36 md:-translate-x-44 h-80 w-72 md:h-96 md:w-96 rounded-lg object-cover hover:cursor-grab active:cursor-grabbing"
       style={{
         x,
         rotate,
@@ -45,9 +45,9 @@ const Card = ({ id, url, setCards, cards, index }) => {
         transform: `translateX(-50%) rotate(${index * 0.5}deg)`,
         zIndex: index,
         transition: "0.125s transform",
-        boxShadow: isFront
-          ? "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5)"
-          : "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+        // boxShadow: isFront
+        //   ? "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5)"
+        //   : "0 4px 6px -1px rgb(0 0 0 / 0.1)",
       }}
       initial={{ scale: 1, opacity: 1 }}
       animate={{ scale: isFront ? 1 : 1.1 - index * 0.01 }}
@@ -63,12 +63,12 @@ const Card = ({ id, url, setCards, cards, index }) => {
 export default SwipeCards;
 
 const cardData = [
-  { id: 1, url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2370&auto=format&fit=crop" },
-  { id: 2, url: "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=2235&auto=format&fit=crop" },
-  { id: 3, url: "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=2342&auto=format&fit=crop" },
-  { id: 4, url: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2224&auto=format&fit=crop" },
-  { id: 5, url: "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?q=80&w=2340&auto=format&fit=crop" },
-  { id: 6, url: "https://images.unsplash.com/photo-1570464197285-9949814674a7?q=80&w=2273&auto=format&fit=crop" },
-  { id: 7, url: "https://images.unsplash.com/photo-1578608712688-36b5be8823dc?q=80&w=2187&auto=format&fit=crop" },
-  { id: 8, url: "https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?q=80&w=2340&auto=format&fit=crop" },
+  { id: 1, url: '../assets/Dee.png' },
+  { id: 2, url: "../assets/ice.png" },
+  { id: 3, url: "../assets/Blank.png" },
+  // { id: 4, url: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2224&auto=format&fit=crop" },
+  // { id: 5, url: "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?q=80&w=2340&auto=format&fit=crop" },
+  // { id: 6, url: "https://images.unsplash.com/photo-1570464197285-9949814674a7?q=80&w=2273&auto=format&fit=crop" },
+  // { id: 7, url: "https://images.unsplash.com/photo-1578608712688-36b5be8823dc?q=80&w=2187&auto=format&fit=crop" },
+  // { id: 8, url: "https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?q=80&w=2340&auto=format&fit=crop" },
 ];
