@@ -2,9 +2,14 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Me } from './pages/Me'
+import { Projects } from './pages/Projects'
+import { Services } from './pages/Services'
+import { Clients } from './pages/Clients'
+import { Course } from './pages/Course'
 import { Preloader } from './components/Preloader'
 import { ContextProvider } from './globals/ContextProvider.jsx'
 import { LanguageSwitch } from './components/LanguageSwitch.jsx'
+import { Footer } from './components/Footer'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -23,10 +28,17 @@ function App() {
       <Router>
         {loading && <Preloader />}
         <LanguageSwitch />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/me" element={<Me />} />
-        </Routes>
+        <div className="min-h-screen bg-black relative">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/me" element={<Me />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/course" element={<Course />} />
+          </Routes>
+          <Footer />
+        </div>
       </Router>
     </ContextProvider>
   )

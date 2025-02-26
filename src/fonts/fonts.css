@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'SM02_KanBaung';
-    src: url('./SM02_KanBaung-Regular.ttf') format('truetype');
+    font-family: 'SM09_BeeZee-Regular';
+    src: url('./SM09_BeeZee-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 .mm-text {
-    font-family: 'SM02_KanBaung', sans-serif;
+    font-family: 'SM09_BeeZee-Regular', sans-serif;
 }
 
 /* Apply Myanmar font to all text elements when language is MM */
 [data-language='MM'] {
-    font-family: 'SM02_KanBaung', sans-serif !important;
+    font-family: 'SM09_BeeZee-Regular', sans-serif !important;
 }
 
 /* Preserve default font for specific elements even in MM mode */

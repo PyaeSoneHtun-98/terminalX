@@ -1,7 +1,5 @@
-import { ClientShowcase } from '../components/ClientShowcase'
 import { AboutMe } from '../components/AboutMe'
 import { motion } from 'framer-motion'
-import SwipeCards from '../components/SwipeCard'
 import { useLanguageContext } from '../globals/ContextProvider'
 import { useNavigate } from 'react-router-dom'
 import { FiArrowLeft } from "react-icons/fi";
@@ -68,9 +66,9 @@ export function Me() {
   }
 
   return (
-    <div className="min-h-screen bg-[#060606] text-white">
+    <div className="min-h-screen bg-[#060606] text-white overflow-x-hidden relative">
       <button onClick={() => navigate(-1)}
-        className='absolute top-2 left-2 z-50 cursor-pointer'>
+        className='absolute top-2 left-2 z-40 cursor-pointer'>
           <FiArrowLeft className="text-white text-2xl" />
       </button>
       {/* Video Section */}
@@ -149,22 +147,6 @@ export function Me() {
           </button>
         </motion.div> */}
       </motion.div>
-
-      {/* Reviews Section */}
-      <div className="pt-4 bg-[#060606]">
-        <motion.h2
-          variants={itemVariants}
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true, amount: 0.1 }}
-          className="text-4xl font-bold text-center text-white mb-12"
-        >
-          {langData.reviews.title}
-        </motion.h2>
-        <SwipeCards />
-      </div>
-
-      <ClientShowcase />
     </div>
   )
 }
