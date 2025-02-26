@@ -7,7 +7,7 @@ export const langDataEN = {
         clients: "Clients"
     },
     hero: {
-        viewMore: "View More"
+        viewMore: "Me"
     },
     about: {
         title: "ABOUT ME",
@@ -68,7 +68,7 @@ export const langDataMM = {
         clients: "အမှုသည်များ"
     },
     hero: {
-        viewMore: "ပိုမိုကြည့်ရှုရန်"
+        viewMore: "ကျွန်ုပ်"
     },
     about: {
         title: "ကျွန်ုပ်အကြောင်း",

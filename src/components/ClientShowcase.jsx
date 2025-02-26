@@ -1,85 +1,71 @@
-import React from 'react'
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
-import {FaXTwitter} from 'react-icons/fa6'
-import { MdEmail } from 'react-icons/md'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguageContext } from '../globals/ContextProvider'
 
 export function ClientShowcase() {
   const { langData } = useLanguageContext()
+  const [hoveredClient, setHoveredClient] = useState(null)
+
+  const clients = [
+    {
+      logo: './assets/logo.png',
+      name: 'Client 1',
+      testimonial: 'Amazing service and outstanding results!'
+    },
+    {
+      logo: './assets/logo.png',
+      name: 'Client 2',
+      testimonial: 'Exceeded our expectations in every way.'
+    },
+    {
+      logo: './assets/logo.png',
+      name: 'Client 3',
+      testimonial: 'Innovative solutions that transformed our business.'
+    },
+    {
+      logo: './assets/logo.png',
+      name: 'Client 4',
+      testimonial: 'Professional team with exceptional skills.'
+    },
+    {
+      logo: './assets/logo.png',
+      name: 'Client 5',
+      testimonial: 'Outstanding partnership and great results.'
+    },
+    {
+      logo: './assets/logo.png',
+      name: 'Client 6',
+      testimonial: 'Highly recommended for any business needs.'
+    }
+  ]
 
   return (
-    <div className="w-full overflow-hidden py-8">
+    <div className="w-full py-16 bg-gray-900">
       <h2 className="text-4xl font-bold text-center mb-12 text-white">{langData.clients.title}</h2>
-      <div className="relative w-full overflow-hidden bg-gray-500 py-2 border-y-2 border-white">
-        <div className="flex space-x-8 animate-scroll whitespace-nowrap">
-          {[...Array(6)].map((_, index) => (
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {clients.map((client, index) => (
+          <motion.div
+            key={index}
+            className="relative bg-gray-800 rounded-lg p-6 cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            onHoverStart={() => setHoveredClient(index)}
+            onHoverEnd={() => setHoveredClient(null)}
+          >
             <img
-              key={index}
-              src="./assets/logo.png"
-              alt="Client Logo"
-              className="h-20 w-auto object-contain"
+              src={client.logo}
+              alt={`${client.name} Logo`}
+              className="h-24 w-auto mx-auto object-contain mb-4"
             />
-          ))}
-          {[...Array(6)].map((_, index) => (
-            <img
-              key={`duplicate-${index}`}
-              src="./assets/logo.png"
-              alt="Client Logo"
-              className="h-20 w-auto object-contain"
-            />
-          ))}
-        </div>
-      </div>
-      <div className="flex justify-center items-center space-x-6 mt-12">
-        <motion.a 
-          href="https://facebook.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-white hover:text-blue-500 transition-colors duration-300"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          <FaFacebook size={20} />
-        </motion.a>
-        <motion.a 
-          href="https://instagram.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-white hover:text-pink-500 transition-colors duration-300"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          <FaInstagram size={20} />
-        </motion.a>
-        <motion.a 
-          href="https://youtube.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-white hover:text-red-500 transition-colors duration-300"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          <FaYoutube size={20} />
-        </motion.a>
-        <motion.a 
-          href="https://x.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-white transition-colors duration-300"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          <FaXTwitter size={20} />
-        </motion.a>
-        <motion.a 
-          href="mailto:pyaesonehtun@969.com" 
-          className="text-white hover:text-green-500 transition-colors duration-300"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          <MdEmail size={20} />
-        </motion.a>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: hoveredClient === index ? 1 : 0 }}
+              className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-90 p-6 rounded-lg"
+            >
+              <h3 className="text-xl font-bold text-white mb-2">{client.name}</h3>
+              <p className="text-gray-300 text-center">"{client.testimonial}"</p>
+            </motion.div>
+          </motion.div>
+        ))}
       </div>
     </div>
   )
