@@ -26,7 +26,7 @@ export function Home() {
     }}>
       <div className="flex flex-col md:flex-row h-full relative">
         {/* Navigation Buttons */}
-        <div className="flex flex-col items-start p-2 md:p-4 md:absolute md:left-1/4 md:top-1/2 md:transform md:-translate-y-1/2 space-y-2 md:space-y-4 z-10">
+        <div className="flex flex-col items-start pt-20 px-8 md:p-4 md:absolute md:left-1/4 md:top-1/2 md:transform md:-translate-y-1/2 space-y-2 md:space-y-4 z-10">
           {['me', 'projects', 'services', 'clients', 'course'].map((route, index) => (
             <motion.button
               key={route}
