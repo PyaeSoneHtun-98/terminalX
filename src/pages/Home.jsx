@@ -14,9 +14,8 @@ export function Home() {
   const { langData } = useLanguageContext()
 
   return (
-    <div className='overflow-x-hidden' style={{ 
+    <div className='overflow-x-hidden h-[100vh]' style={{ 
       width: '100vw', 
-      height: '100vh', 
       backgroundColor: '#060606', 
       position: 'relative',
       backgroundImage: 'url(./assets/cloud.jpg)',
@@ -25,8 +24,20 @@ export function Home() {
       backgroundRepeat: 'no-repeat'
     }}>
       <div className="flex flex-col md:flex-row h-full relative">
+        {/* 3D Canvas */}
+        <div className="w-full h-[70vh] md:w-full md:h-full md:ml-72 order-1 md:order-2">
+          <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
+            <ambientLight intensity={0.8} />
+            <directionalLight position={[5, 5, 5]} intensity={1.2} />
+            <Suspense fallback={null}>
+              <Computer />
+              <OrbitControls enableZoom={false} />
+            </Suspense>
+          </Canvas>
+        </div>
+
         {/* Navigation Buttons */}
-        <div className="flex flex-col items-start pt-20 px-8 md:p-4 md:absolute md:left-1/4 md:top-1/2 md:transform md:-translate-y-1/2 space-y-2 md:space-y-4 z-10">
+        <div className="flex flex-col gap-1 md:gap-2 justify-center items-center px-8 md:p-4 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/5 md:-translate-y-1/2 md:space-y-4 z-10 order-2 md:order-1">
           {['me', 'projects', 'services', 'clients', 'course'].map((route, index) => (
             <motion.button
               key={route}
@@ -46,18 +57,6 @@ export function Home() {
               </span>
             </motion.button>
           ))}
-        </div>
-
-        {/* 3D Canvas */}
-        <div className="w-full h-[50vh] md:w-full md:h-full md:ml-72">
-          <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
-            <ambientLight intensity={0.8} />
-            <directionalLight position={[5, 5, 5]} intensity={1.2} />
-            <Suspense fallback={null}>
-              <Computer />
-              <OrbitControls enableZoom={false} />
-            </Suspense>
-          </Canvas>
         </div>
       </div>
       <div className="absolute bottom-6 left-0 w-full pb-6">

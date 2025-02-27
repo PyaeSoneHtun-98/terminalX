@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import { Home } from './pages/Home'
 import { Me } from './pages/Me'
 import { Projects } from './pages/Projects'
@@ -29,14 +30,16 @@ function App() {
         {loading && <Preloader />}
         <LanguageSwitch />
         <div className="min-h-screen bg-black relative">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/me" element={<Me />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/clients" element={<Clients />} />
-            <Route path="/course" element={<Course />} />
-          </Routes>
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/me" element={<Me />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/clients" element={<Clients />} />
+              <Route path="/course" element={<Course />} />
+            </Routes>
+          </AnimatePresence>
           <Footer />
         </div>
       </Router>
