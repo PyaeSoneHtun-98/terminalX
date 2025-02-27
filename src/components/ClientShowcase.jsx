@@ -8,32 +8,32 @@ export function ClientShowcase() {
 
   const clients = [
     {
-      logo: './assets/logo.png',
+      logo: '/assets/logo.png',
       name: 'Client 1',
       testimonial: 'Amazing service and outstanding results!'
     },
     {
-      logo: './assets/logo.png',
+      logo: '/assets/logo.png',
       name: 'Client 2',
       testimonial: 'Exceeded our expectations in every way.'
     },
     {
-      logo: './assets/logo.png',
+      logo: '/assets/logo.png',
       name: 'Client 3',
       testimonial: 'Innovative solutions that transformed our business.'
     },
     {
-      logo: './assets/logo.png',
+      logo: '/assets/logo.png',
       name: 'Client 4',
       testimonial: 'Professional team with exceptional skills.'
     },
     {
-      logo: './assets/logo.png',
+      logo: '/assets/logo.png',
       name: 'Client 5',
       testimonial: 'Outstanding partnership and great results.'
     },
     {
-      logo: './assets/logo.png',
+      logo: '/assets/logo.png',
       name: 'Client 6',
       testimonial: 'Highly recommended for any business needs.'
     }

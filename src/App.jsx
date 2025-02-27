@@ -5,7 +5,7 @@ import { Home } from './pages/Home'
 import { Me } from './pages/Me'
 import { Projects } from './pages/Projects'
 import { Services } from './pages/Services'
-import { Clients } from './pages/Clients'
+import { Requirements } from './pages/Requirements'
 import { Course } from './pages/Course'
 import { Preloader } from './components/Preloader'
 import { ContextProvider } from './globals/ContextProvider.jsx'
@@ -36,7 +36,7 @@ function App() {
               <Route path="/me" element={<Me />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/clients" element={<Clients />} />
+              <Route path="/requirements" element={<Requirements />} />
               <Route path="/course" element={<Course />} />
             </Routes>
           </AnimatePresence>

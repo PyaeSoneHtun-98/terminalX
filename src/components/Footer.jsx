@@ -10,8 +10,8 @@ export function Footer() {
       className="w-full absolute bottom-1 left-0 flex justify-center"
     >
       <div className="container mx-auto">
-        <p className="text-center text-gray-400 text-xs md:text-sm ">
-        Created by PyaeSoneHtun
+        <p className="text-center text-gray-400 text-[8px] md:text-[10px] ">
+        Designed by PyaeSoneHtun
         </p>
       </div>
     </motion.footer>

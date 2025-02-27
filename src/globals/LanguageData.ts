@@ -1,4 +1,21 @@
 export const langDataEN = {
+    requirements: {
+        title: "REQUIREMENTS",
+        items: [
+            {
+                title: "Project Details",
+                description: "Provide a clear description of your project, including goals, target audience, and desired outcomes."
+            },
+            {
+                title: "Timeline & Budget",
+                description: "Specify your project timeline and budget range to help us plan effectively."
+            },
+            {
+                title: "Reference Materials",
+                description: "Share any reference materials, inspiration, or examples that align with your vision."
+            }
+        ]
+    },
     nav: {
         home: "Home",
         about: "About",
@@ -7,7 +24,11 @@ export const langDataEN = {
         clients: "Clients"
     },
     hero: {
-        viewMore: "Me"
+        me: "ကျွန်တော့်အကြောင်း",
+        projects: "ပရောဂျက်များ",
+        services: "ဝန်ဆောင်မှုများ",
+        course: "သင်တန်းများ",
+        requirements: "လိုအပ်ချက်များ"
     },
     about: {
         title: "ABOUT ME",
@@ -21,27 +42,29 @@ export const langDataEN = {
         brandIdentity: {
             title: "BRAND IDENTITY",
             items: [
-                "Logo Design",
-                "Identity Build",
-                "Creative Direction",
-                "Social Design"
+                "Social Media Design",
+                "Product 3D Modeling", 
+                "Product Animation",
+                "Logo Animation",
             ]
         },
         videoProduction: {
             title: "VIDEO PRODUCTION",
             items: [
-                "Marketing Videos",
-                "Television Ads",
-                "Documentaries",
-                "Short Film"
+                "Vlog",
+                "Motion Graphics",
+                "Short Form Contents",
+                "Gaming Contents",
+                "Color Grading",
+                "Music Video",
+                "Lyrics Video",
             ]
         },
         animation: {
             title: "ANIMATION / VFX",
             items: [
-                "2D Animation",
                 "3D Animation",
-                "Compositing"
+                "VFX Compositing"
             ]
         },
         getInTouch: "Get in Touch"
@@ -56,10 +79,27 @@ export const langDataEN = {
         title: "Project Requirements",
         description: "To start your project, please provide:\n\n• Clear project objectives and goals\n• Timeline expectations\n• Budget range\n• Reference materials (if any)\n\nI'll review your requirements and respond within 24 hours.",
         viewProject: "View Project"
-    }
+    },
 };
 
 export const langDataMM = {
+    requirements: {
+        title: "လိုအပ်ချက်များ",
+        items: [
+            {
+                title: "စီမံကိန်း အသေးစိတ်",
+                description: "သင့်စီမံကိန်း၏ ရည်မှန်းချက်များ၊ ဦးတည်ပရိသတ်နှင့် လိုချင်သော ရလဒ်များ အပါအဝင် ရှင်းလင်းသော ဖော်ပြချက်ကို ပေးပါ။"
+            },
+            {
+                title: "အချိန်ဇယားနှင့် ဘတ်ဂျက်",
+                description: "ထိရောက်စွာ စီစဉ်နိုင်ရန် သင့်စီမံကိန်း အချိန်ဇယားနှင့် ဘတ်ဂျက်အတိုင်းအတာကို ဖော်ပြပါ။"
+            },
+            {
+                title: "ကိုးကား ပစ္စည်းများ",
+                description: "သင့်မျှော်မှန်းချက်နှင့် ကိုက်ညီသော မည်သည့် ကိုးကားပစ္စည်းများ၊ စိတ်ကူးများ သို့မဟုတ် ဥပမာများကိုမဆို မျှဝေပါ။"
+            }
+        ]
+    },
     nav: {
         home: "ပင်မ",
         about: "အကြောင်း",
@@ -80,35 +120,37 @@ export const langDataMM = {
     services: {
         title: "ဝန်ဆောင်မှုများ",
         brandIdentity: {
-            title: "အမှတ်တံဆိပ် သရုပ်သဏ္ဍာန်",
+            title: "Brand Identity",
             items: [
-                "လိုဂို ဒီဇိုင်း",
-                "သရုပ်သဏ္ဍာန် တည်ဆောက်ခြင်း",
-                "ဖန်တီးမှုဆိုင်ရာ လမ်းညွှန်မှု",
-                "လူမှုကွန်ရက် ဒီဇိုင်း"
+                "Social Media Design",
+                "Product 3D Modeling", 
+                "Product Animation",
+                "Logo Animation",
             ]
         },
         videoProduction: {
-            title: "ဗီဒီယို ထုတ်လုပ်မှု",
+            title: "Video Production",
             items: [
-                "မာကတ်တင် ဗီဒီယိုများ",
-                "ရုပ်မြင်သံကြား ကြော်ငြာများ",
-                "မှတ်တမ်းရုပ်ရှင်များ",
-                "ရုပ်ရှင်တို"
+                "Vlog",
+                "Motion Graphics",
+                "Short Form Contents",
+                "Gaming Contents",
+                "Color Grading",
+                "Music Video",
+                "Lyrics Video",
             ]
         },
         animation: {
-            title: "အနီမေးရှင်း / VFX",
+            title: "Animation / VFX",
             items: [
-                "2D အနီမေးရှင်း",
-                "3D အနီမေးရှင်း",
-                "ပေါင်းစပ်ခြင်း"
+                "3D Animation",
+                "VFX Compositing"
             ]
         },
         getInTouch: "ဆက်သွယ်ရန်"
     },
     reviews: {
-        title: "Clientများ၏ သုံးသပ်ချက်များ"
+        title: "Clientများ၏ Reviewများ"
     },
     clients: {
         title: "ကျွန်ုပ်၏ Clientများ"
@@ -117,7 +159,7 @@ export const langDataMM = {
         title: "စီမံကိန်း လိုအပ်ချက်များ",
         description: "သင့်စီမံကိန်းကို စတင်ရန် အောက်ပါအချက်များကို ပေးပို့ပါ:\n\n• ရှင်းလင်းသော စီမံကိန်း ရည်ရွယ်ချက်နှင့် ပန်းတိုင်များ\n• အချိန်ဇယား မျှော်မှန်းချက်များ\n• ဘတ်ဂျက် အတိုင်းအတာ\n• ကိုးကား ပစ္စည်းများ (ရှိပါက)\n\nသင့်လိုအပ်ချက်များကို 24 နာရီအတွင်း ပြန်လည်တုံ့ပြန်ပါမည်။",
         viewProject: "စီမံကိန်းကို ကြည့်ရှုရန်"
-    }
+    },
 };
 
 export const alertsEN = {

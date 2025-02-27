@@ -84,40 +84,22 @@ export function Carousel({ items, interval = 5000 }) {
             {items[currentIndex]}
           </motion.div>
         </AnimatePresence>
-
-        {/* <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full z-10"
-          onClick={() => {
-            setIsAutoPlaying(false)
-            paginate(-1)
-          }}
-        >
-          <FiChevronLeft size={24} />
-        </button>
-
-        <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full z-10"
-          onClick={() => {
-            setIsAutoPlaying(false)
-            paginate(1)
-          }}
-        >
-          <FiChevronRight size={24} />
-        </button> */}
       </div>
 
-      <div className="flex justify-center mt-2 sm:mt-4 gap-1 sm:gap-2">
-        {items.map((_, index) => (
-          <button
-            key={index}
-            className={`w-2 h-2 rounded-full transition-colors ${currentIndex === index ? 'bg-white' : 'bg-gray-500'}`}
-            onClick={() => {
-              setIsAutoPlaying(false)
-              setDirection(index > currentIndex ? 1 : -1)
-              setCurrentIndex(index)
-            }}
-          />
-        ))}
+      <div className="absolute left-0 right-0 bottom-[10%] md:static md:mt-2 sm:mt-4">
+        <div className="flex justify-center gap-1 sm:gap-2">
+          {items.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full transition-colors ${currentIndex === index ? 'bg-white' : 'bg-gray-500'}`}
+              onClick={() => {
+                setIsAutoPlaying(false)
+                setDirection(index > currentIndex ? 1 : -1)
+                setCurrentIndex(index)
+              }}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

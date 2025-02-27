@@ -63,9 +63,9 @@ const Card = ({ id, url, setCards, cards, index }) => {
 export default SwipeCards;
 
 const cardData = [
-  { id: 1, url: '../assets/Dee.png' },
-  { id: 2, url: "../assets/ice.png" },
-  { id: 3, url: "../assets/Blank.png" },
+  { id: 1, url: '/assets/Dee.png' },
+  { id: 2, url: "/assets/ice.png" },
+  { id: 3, url: "/assets/Blank.png" },
   // { id: 4, url: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2224&auto=format&fit=crop" },
   // { id: 5, url: "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?q=80&w=2340&auto=format&fit=crop" },
   // { id: 6, url: "https://images.unsplash.com/photo-1570464197285-9949814674a7?q=80&w=2273&auto=format&fit=crop" },

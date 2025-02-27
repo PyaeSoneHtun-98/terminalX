@@ -37,13 +37,13 @@ export function Home() {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex flex-col gap-1 md:gap-2 justify-center items-center px-8 md:p-4 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/5 md:-translate-y-1/2 md:space-y-4 z-10 order-2 md:order-1">
-          {['me', 'projects', 'services', 'clients', 'course'].map((route, index) => (
+        <div className="flex flex-col gap-1 md:gap-2 justify-center items-center md:justify-start md:items-start px-8 md:p-4 absolute left-1/2 md:left-1/4 top-1/2 md:transform -translate-x-1/2 -translate-y-1/5 md:-translate-y-1/2 md:space-y-4 z-10 order-2 md:order-1">
+          {['me', 'projects', 'services', 'course', 'requirements'].map((route, index) => (
             <motion.button
               key={route}
               onClick={() => navigate(`/${route}`)}
-              className="relative w-36 md:w-48 h-10 md:h-12 px-3 md:px-4 py-1 md:py-2 bg-white border-4 border-[#4A3423] rounded-none
-                       font-pixel text-base md:text-lg text-[#2C1810] uppercase tracking-wider
+              className="relative w-42 md:w-52 h-10 md:h-12 px-3 md:px-4 py-1 md:py-2 bg-white border-4 border-[#4A3423] rounded-none
+                       font-pixel text-sm md:text-lg text-[#2C1810] uppercase tracking-wider
                        before:content-[''] before:absolute before:inset-0 before:bg-[#F5F5F5]
                        before:border-t-4 before:border-[#E0E0E0] before:transform before:translate-y-[-2px]
                        hover:before:translate-y-0 hover:translate-y-[2px]
@@ -53,7 +53,7 @@ export function Home() {
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
               <span className="relative z-10 drop-shadow-[2px_2px_0_#000]">
-                {route === 'me' ? langData.hero.viewMore : route}
+                {langData.hero[route] || route}
               </span>
             </motion.button>
           ))}
@@ -62,7 +62,7 @@ export function Home() {
       <div className="absolute bottom-6 left-0 w-full pb-6">
         <div className="flex justify-center items-center space-x-6">
           <motion.a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/share/15xC1pXdLY/?mibextid=LQQJ4d" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover:text-blue-500 transition-colors duration-300"
@@ -82,7 +82,7 @@ export function Home() {
             <FaInstagram size={20} />
           </motion.a>
           <motion.a 
-            href="https://youtube.com" 
+            href="https://youtube.com/@term1nalx?si=YFE4rSReNZbT7IJF" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover:text-red-500 transition-colors duration-300"
@@ -102,7 +102,7 @@ export function Home() {
             <FaXTwitter size={20} />
           </motion.a>
           <motion.a 
-            href="https://t.me/yourusername" 
+            href="https://t.me/terminalxedit" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover:text-blue-400 transition-colors duration-300"
