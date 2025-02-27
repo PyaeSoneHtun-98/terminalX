@@ -2,9 +2,12 @@ import { motion } from 'framer-motion';
 import { useLanguageContext } from '../globals/ContextProvider';
 import { ClientShowcase } from '../components/ClientShowcase';
 import SwipeCards from '../components/SwipeCard';
+import { useNavigate } from 'react-router-dom';
+import { FiArrowLeft } from "react-icons/fi";
 
 export function Services() {
   const { langData } = useLanguageContext();
+  const navigate = useNavigate();
 
   const containerVariants = {
     initial: { opacity: 0 },
@@ -65,6 +68,9 @@ export function Services() {
 
   return (
     <div className="min-h-screen bg-[#060606] text-white overflow-x-hidden relative pb-4">
+      <button onClick={() => navigate(-1)} className='absolute top-2 left-2 z-40 cursor-pointer'>
+        <FiArrowLeft className="text-white text-2xl" />
+      </button>
       <motion.div
         variants={containerVariants}
         initial="initial"

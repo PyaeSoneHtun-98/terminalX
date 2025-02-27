@@ -52,7 +52,7 @@ export function Home() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
-              <span className="relative z-10 drop-shadow-[2px_2px_0_#000]">
+              <span className="relative z-10 text-[#2C1810] font-bold">
                 {langData.hero[route] || route}
               </span>
             </motion.button>

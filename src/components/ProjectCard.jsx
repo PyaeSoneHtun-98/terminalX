@@ -27,21 +27,14 @@ export function ProjectCard({ title, description, image, videoUrl, projectUrl, t
     >
       <div className="relative aspect-video sm:aspect-video">
         {videoUrl ? (
-          isHovered ? (
-            <video
-              src={videoUrl}
-              className="w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-            />
-          ) : (
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-full object-cover"
-            />
-          )
+          <video
+            src={videoUrl}
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
         ) : (
           <img
             src={image}
@@ -72,12 +65,12 @@ export function ProjectCard({ title, description, image, videoUrl, projectUrl, t
             <button
               className="hidden sm:flex items-center gap-2 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all duration-200 w-full justify-center border border-white/20 shadow-lg"
             >
-              <CiShare1 className="text-lg" />
+              <CiShare1 className="text-base" />
               View Project
             </button>
-            <div className="flex sm:hidden gap-2 px-2 w-full items-center cursor-pointer hover:text-white/80 group justify-center">
-              <CiShare1 className="text-white text-lg group-hover:text-white/80" />
-              <span className="text-white group-hover:text-white/80 text-sm">
+            <div className="flex sm:hidden gap-2 pt-2 px2 w-full items-center cursor-pointer hover:text-white/80 group justify-center">
+              <CiShare1 className="text-white text-sm group-hover:text-white/80" />
+              <span className="text-white group-hover:text-white/80 text-xs">
                 View Project
               </span>
             </div>

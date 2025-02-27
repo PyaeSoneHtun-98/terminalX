@@ -24,11 +24,11 @@ export const langDataEN = {
         clients: "Clients"
     },
     hero: {
-        me: "ကျွန်တော့်အကြောင်း",
-        projects: "ပရောဂျက်များ",
-        services: "ဝန်ဆောင်မှုများ",
-        course: "သင်တန်းများ",
-        requirements: "လိုအပ်ချက်များ"
+        me: "About Me",
+        projects: "Projects",
+        services: "Services",
+        course: "Courses",
+        requirements: "Requirements"
     },
     about: {
         title: "ABOUT ME",
@@ -108,7 +108,11 @@ export const langDataMM = {
         clients: "အမှုသည်များ"
     },
     hero: {
-        viewMore: "ကျွန်ုပ်"
+        me: "ကျွန်တော့်အကြောင်း",
+        projects: "ပရောဂျက်များ",
+        services: "ဝန်ဆောင်မှုများ",
+        course: "သင်တန်းများ",
+        requirements: "လိုအပ်ချက်များ"
     },
     about: {
         title: "ကျွန်ုပ်အကြောင်း",

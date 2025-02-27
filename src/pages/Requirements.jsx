@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { useLanguageContext } from '../globals/ContextProvider';
+import { useNavigate } from 'react-router-dom';
+import { FiArrowLeft } from "react-icons/fi";
 
 export function Requirements() {
   const { langData } = useLanguageContext();
+  const navigate = useNavigate();
 
   const containerVariants = {
     initial: { opacity: 0 },
@@ -27,6 +30,9 @@ export function Requirements() {
 
   return (
     <div className="min-h-screen bg-[#060606] text-white overflow-x-hidden relative pb-4">
+      <button onClick={() => navigate(-1)} className='absolute top-2 left-2 z-40 cursor-pointer'>
+        <FiArrowLeft className="text-white text-2xl" />
+      </button>
       <motion.div
         variants={containerVariants}
         initial="initial"

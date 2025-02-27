@@ -1,8 +1,11 @@
 import { ProjectCard } from '../components/ProjectCard'
 import { motion } from 'framer-motion'
 import { Carousel } from '../components/Carousel'
+import { useNavigate } from 'react-router-dom'
+import { FiArrowLeft } from "react-icons/fi"
 
 export function Projects() {
+  const navigate = useNavigate()
   const projectsByCategory = {
     videoEditing: [
       {
@@ -74,7 +77,10 @@ export function Projects() {
   }
 
   return (
-    <div className="min-h-screen bg-black py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black py-12 px-4 sm:px-6 lg:px-8 relative">
+      <button onClick={() => navigate(-1)} className='absolute top-2 left-2 z-40 cursor-pointer'>
+        <FiArrowLeft className="text-white text-2xl" />
+      </button>
       <div className="max-w-7xl mx-auto space-y-16">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
