@@ -28,7 +28,7 @@ const SpringModal = ({
             <div className="relative z-10">
               <div
                 className="absolute top-2 text-lg right-2 cursor-pointer text-red-500 hover:text-white hover:bg-red-500 p-3 rounded-full"
-                onClick={onClose}
+                // onClick={onClose}
               >
                 <IoMdClose />
               </div>

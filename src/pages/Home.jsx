@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { Suspense } from 'react'
 import { Computer } from '../components/Computer'
 import { motion } from 'framer-motion'
-import { FaFacebook, FaInstagram, FaYoutube, FaTelegram } from 'react-icons/fa'
-import {FaXTwitter} from 'react-icons/fa6'
+import { FaFacebook, FaInstagram, FaYoutube, FaTelegram, FaTiktok } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { useLanguageContext } from '../globals/ContextProvider'
 
@@ -72,7 +71,7 @@ export function Home() {
             <FaFacebook size={20} />
           </motion.a>
           <motion.a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/term2nalx?igsh=MXU1eTZlbnlueGR3dQ%3D%3D&utm_source=qr" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover:text-pink-500 transition-colors duration-300"
@@ -92,14 +91,14 @@ export function Home() {
             <FaYoutube size={20} />
           </motion.a>
           <motion.a 
-            href="https://x.com" 
+            href="https://www.tiktok.com/@terminqlx?_t=ZS-8uErswEjUME&_r=1" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-white transition-colors duration-300"
+            className="text-white hover:text-red-300 transition-colors duration-300"
             whileHover={{ scale: 1.2, rotate: 10 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <FaXTwitter size={20} />
+            <FaTiktok size={20} />
           </motion.a>
           <motion.a 
             href="https://t.me/terminalxedit" 
@@ -112,7 +111,7 @@ export function Home() {
             <FaTelegram size={20} />
           </motion.a>
           <motion.a 
-            href="mailto:contact@example.com" 
+            href="mailto:terminaledge.x8@gmail.com" 
             className="text-white hover:text-green-500 transition-colors duration-300"
             whileHover={{ scale: 1.2, rotate: 10 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
