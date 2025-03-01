@@ -12,7 +12,7 @@ export function Projects() {
         title: 'Video Edit Showcase',
         description: 'A dynamic video editing project demonstrating transitions and effects',
         image: '/assets/Blank.png',
-        videoUrl: '/assets/edit.mp4',
+        youtubeUrl: 'https://youtu.be/f4AocpJDfsM',
         tags: ['Video Editing', 'After Effects', 'Motion Graphics']
       },
       {

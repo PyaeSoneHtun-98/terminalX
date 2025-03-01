@@ -26,7 +26,14 @@ export function ProjectCard({ title, description, image, videoUrl, projectUrl, t
       onHoverEnd={() => setIsHovered(false)}
     >
       <div className="relative aspect-video sm:aspect-video">
-        {videoUrl ? (
+        {youtubeUrl ? (
+          <iframe
+            src={`${youtubeUrl.replace('youtu.be/', 'youtube.com/embed/')}?autoplay=1&mute=1&loop=1&controls=1&modestbranding=1&showinfo=0&rel=0&playlist=${youtubeUrl.split('/').pop()}&iv_load_policy=3&fs=0&disablekb=1`}
+            className="w-full h-full object-cover"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : videoUrl ? (
           <video
             src={videoUrl}
             className="w-full h-full object-cover"
