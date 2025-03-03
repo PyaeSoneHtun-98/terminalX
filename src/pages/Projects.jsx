@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Carousel } from '../components/Carousel'
 import { useNavigate } from 'react-router-dom'
 import { FiArrowLeft } from "react-icons/fi"
+import { BeforeAfter } from '../components/BeforeAfter'
 
 export function Projects() {
   const navigate = useNavigate()
@@ -86,11 +87,10 @@ export function Projects() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-white text-center mb-12"
+          className="text-4xl font-bold text-white text-center md:text-start mb-12"
         >
           My Projects
         </motion.h1>
-        
         {/* Video Editing Section */}
         <motion.section
           variants={sectionVariants}
@@ -143,6 +143,35 @@ export function Projects() {
               </div>
             ))}
           />
+        </motion.section>
+
+        {/* Thumbnail Sample Section */}
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          <h2 className="text-3xl font-bold text-white flex justify-center">Thumbnail Samples</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <BeforeAfter
+              beforeImage="/assets/before_1.png"
+              afterImage="/assets/after_1.png"
+            />
+            <BeforeAfter
+              beforeImage="/assets/before_2.png"
+              afterImage="/assets/after_2.png"
+            />
+            <BeforeAfter
+              beforeImage="/assets/before_3.png"
+              afterImage="/assets/after_3.png"
+            />
+            <BeforeAfter
+              beforeImage="/assets/before_4.jpg"
+              afterImage="/assets/after_4.png"
+            />
+          </div>
         </motion.section>
       </div>
     </div>
