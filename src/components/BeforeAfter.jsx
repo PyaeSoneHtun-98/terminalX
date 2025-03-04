@@ -1,6 +1,7 @@
 import ReactCompareImage from 'react-compare-image'
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { LoadingBeforeAfter } from './LoadingBeforeAfter';
 
 export function BeforeAfter({ beforeImage, afterImage }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,17 +32,7 @@ export function BeforeAfter({ beforeImage, afterImage }) {
   return (
     <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
       {isLoading ? (
-        <motion.div
-          className="absolute inset-0 bg-gray-800"
-          animate={{
-            background: ['#1F2937', '#374151', '#1F2937'],
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: 'linear'
-          }}
-        />
+        <LoadingBeforeAfter />
       ) : (
         <ReactCompareImage
           leftImage={beforeImage}
