@@ -8,66 +8,82 @@ import { BeforeAfter } from '../components/BeforeAfter'
 export function Projects() {
   const navigate = useNavigate()
   const projectsByCategory = {
-    videoEditing: [
+    gaming: [
       {
-        title: 'Video Edit Showcase',
-        description: 'A dynamic video editing project demonstrating transitions and effects',
+        title: 'Gaming Highlights',
+        description: 'Dynamic gaming montage with effects and synced editing',
         image: '/assets/Blank.png',
-        youtubeUrl: 'https://youtu.be/f4AocpJDfsM',
-        tags: ['Video Editing', 'After Effects', 'Motion Graphics']
+        youtubeUrl: 'https://youtu.be/lVAWSK3LR8U',
+        tags: ['Gaming', 'Montage', 'Effects']
+      }
+    ],
+    creativeEdits: [
+      {
+        title: 'Personal Edit Showcase',
+        description: 'Creative personal edits with dynamic transitions and effects',
+        image: '/assets/Blank.png',
+        youtubeUrl: 'https://youtu.be/6RrEFgfeRZk',
+        tags: ['Personal Edit', 'Creative', 'Transitions']
       },
       {
-        title: 'Corporate Video Production',
-        description: 'Professional corporate video production and editing',
+        title: 'Personal Style Edit',
+        description: 'Stylized personal content with unique visual approach',
+        image: '/assets/cloud.jpg',
+        youtubeUrl: 'https://youtu.be/pGoc4ZL9I8E',
+        tags: ['Style Edit', 'Visual Effects', 'Creative']
+      },
+      {
+        title: 'Travel Vlog',
+        description: 'Engaging travel vlog with cinematic elements',
+        image: '/assets/cloud.jpg',
+        youtubeUrl: 'https://youtu.be/mGiBTbxCUgU',
+        tags: ['Vlog', 'Travel', 'Cinematic']
+      }
+    ],
+    documentaries: [
+      {
+        title: 'Documentary: Myanmar Culture',
+        description: 'Cultural documentary showcasing Myanmar traditions',
         image: '/assets/Dee.png',
-        videoUrl: '/assets/edit.mp4',
-        tags: ['Corporate', 'Production', 'Editing']
+        youtubeUrl: 'https://youtu.be/0ZoOiiw5wdY',
+        tags: ['Documentary', 'Culture', 'Storytelling']
       },
       {
-        title: 'Event Cinematography',
-        description: 'Professional event coverage with cinematic style and emotional depth',
-        image: '/assets/cloud.jpg',
-        videoUrl: '/assets/edit.mp4',
-        tags: ['Events', 'Cinematography', 'Live Production']
-      }
-    ],
-    motionGraphics: [
-      {
-        title: 'Motion Graphics Portfolio',
-        description: 'Creative motion graphics and animations for digital media',
+        title: 'Documentary: Local Stories',
+        description: 'Documentary highlighting local perspectives and stories',
         image: '/assets/ice.png',
-        videoUrl: '/assets/edit.mp4',
-        tags: ['Motion Graphics', 'Animation', 'Design']
-      },
-      {
-        title: 'Visual Effects Project',
-        description: 'Stunning visual effects and compositing work',
-        image: '/assets/cloud.jpg',
-        videoUrl: '/assets/edit.mp4',
-        tags: ['VFX', 'Compositing', 'After Effects']
-      },
-      {
-        title: 'Social Media Content',
-        description: 'Engaging social media video content and animations',
-        image: '/assets/Blank.png',
-        videoUrl: '/assets/edit.mp4',
-        tags: ['Social Media', 'Content Creation', 'Animation']
+        youtubeUrl: 'https://youtu.be/hlLhxgE9xxk',
+        tags: ['Documentary', 'Local Stories', 'Cinematography']
       }
     ],
-    animation3D: [
+    musicAndLyrics: [
       {
-        title: '3D Animation Showcase',
-        description: 'Impressive 3D animations and character modeling',
+        title: 'Music Video Production',
+        description: 'Professional music video with artistic direction',
         image: '/assets/logo.png',
-        videoUrl: '/assets/edit.mp4',
-        tags: ['3D Animation', 'Modeling', 'Cinema 4D']
+        youtubeUrl: 'https://youtu.be/iq9HcvgWD8Q',
+        tags: ['Music Video', 'Production', 'Artistic']
       },
       {
-        title: 'Commercial Advertisement',
-        description: 'High-impact commercial video production with compelling storytelling',
+        title: 'Creative Music Edit',
+        description: 'Creative edit combining music and visual elements',
+        image: '/assets/ice.png',
+        youtubeUrl: 'https://youtu.be/3aTZFb7hopo',
+        tags: ['Music', 'Creative Edit', 'Visual']
+      },
+      {
+        title: 'Lyric Video Animation',
+        description: 'Animated lyric video with dynamic typography',
         image: '/assets/logo.png',
-        videoUrl: '/assets/edit.mp4',
-        tags: ['Commercial', 'Advertising', 'Storytelling']
+        youtubeUrl: 'https://youtu.be/RkoMIFnEBfk',
+        tags: ['Lyrics', 'Animation', 'Typography']
+      },
+      {
+        title: 'Stylized Lyric Video',
+        description: 'Stylized lyric video with creative visual effects',
+        image: '/assets/Blank.png',
+        youtubeUrl: 'https://youtu.be/uRxyxgrxKEw',
+        tags: ['Lyrics', 'Style', 'Effects']
       }
     ]
   }
@@ -91,7 +107,7 @@ export function Projects() {
         >
           My Projects
         </motion.h1>
-        {/* Video Editing Section */}
+        {/* Gaming Section */}
         <motion.section
           variants={sectionVariants}
           initial="initial"
@@ -99,9 +115,9 @@ export function Projects() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <h2 className="text-3xl font-semibold text-white text-center">Video Editing</h2>
+          <h2 className="text-3xl font-semibold text-white text-center">Gaming Edits</h2>
           <Carousel
-            items={projectsByCategory.videoEditing.map((project, index) => (
+            items={projectsByCategory.gaming.map((project, index) => (
               <div key={index} className="px-4">
                 <ProjectCard {...project} />
               </div>
@@ -109,7 +125,7 @@ export function Projects() {
           />
         </motion.section>
 
-        {/* Motion Graphics Section */}
+        {/* Creative Edits Section */}
         <motion.section
           variants={sectionVariants}
           initial="initial"
@@ -117,9 +133,9 @@ export function Projects() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <h2 className="text-3xl font-semibold text-white text-center">Motion Graphics & VFX</h2>
+          <h2 className="text-3xl font-semibold text-white text-center">Creative Edits</h2>
           <Carousel
-            items={projectsByCategory.motionGraphics.map((project, index) => (
+            items={projectsByCategory.creativeEdits.map((project, index) => (
               <div key={index} className="px-4">
                 <ProjectCard {...project} />
               </div>
@@ -127,7 +143,7 @@ export function Projects() {
           />
         </motion.section>
 
-        {/* 3D Animation Section */}
+        {/* Documentaries Section */}
         <motion.section
           variants={sectionVariants}
           initial="initial"
@@ -135,9 +151,27 @@ export function Projects() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <h2 className="text-3xl font-semibold text-white text-center">3D Animation</h2>
+          <h2 className="text-3xl font-semibold text-white text-center">Documentaries</h2>
           <Carousel
-            items={projectsByCategory.animation3D.map((project, index) => (
+            items={projectsByCategory.documentaries.map((project, index) => (
+              <div key={index} className="px-4">
+                <ProjectCard {...project} />
+              </div>
+            ))}
+          />
+        </motion.section>
+
+        {/* Music & Lyrics Section */}
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          <h2 className="text-3xl font-semibold text-white text-center">Music & Lyrics</h2>
+          <Carousel
+            items={projectsByCategory.musicAndLyrics.map((project, index) => (
               <div key={index} className="px-4">
                 <ProjectCard {...project} />
               </div>

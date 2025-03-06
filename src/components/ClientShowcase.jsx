@@ -49,24 +49,32 @@ export function ClientShowcase() {
         {clients.map((client, index) => (
           <motion.div
             key={index}
-            className="relative bg-gray-800 rounded-lg p-6 cursor-pointer"
+            className="relative bg-gray-800 rounded-lg p-4 sm:p-6 cursor-pointer focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
             whileHover={{ scale: 1.05 }}
             onClick={() => handleClientClick(index)}
             onHoverStart={() => setActiveClient(index)}
             onHoverEnd={() => setActiveClient(null)}
+            role="button"
+            tabIndex={0}
+            aria-expanded={activeClient === index}
+            aria-label={`View testimonial from ${client.name}`}
+            onKeyPress={(e) => e.key === 'Enter' && handleClientClick(index)}
           >
             <img
               src={client.logo}
               alt={`${client.name} Logo`}
-              className="h-24 w-auto mx-auto object-contain mb-4"
+              className="h-16 sm:h-24 w-auto mx-auto object-contain mb-2 sm:mb-4"
+              loading="lazy"
             />
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: activeClient === index ? 1 : 0 }}
-              className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-90 p-6 rounded-lg"
+              className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-90 p-3 sm:p-6 rounded-lg"
+              role="region"
+              aria-label={`Testimonial from ${client.name}`}
             >
-              <h3 className="text-xl font-bold text-white mb-2">{client.name}</h3>
-              <p className="text-gray-300 text-center">"{client.testimonial}"</p>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">{client.name}</h3>
+              <p className="text-sm sm:text-base text-gray-300 text-center">"{client.testimonial}"</p>
             </motion.div>
           </motion.div>
         ))}
