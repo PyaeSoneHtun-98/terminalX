@@ -70,7 +70,7 @@ export function ProjectCard({ title, description, image, videoUrl, projectUrl, t
             className="mt-auto"
           >
             <button
-              className="hidden sm:flex items-center gap-2 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all duration-200 w-full justify-center border border-white/20 shadow-lg"
+              className="hidden sm:flex items-center cursor-pointer gap-2 bg-white/10 text-white px-4 py-2 rounded-lg transition-all duration-200 w-full justify-center border border-white/20 shadow-lg"
             >
               <CiShare1 className="text-base" />
               View Project

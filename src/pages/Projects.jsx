@@ -15,9 +15,7 @@ export function Projects() {
         image: '/assets/Blank.png',
         youtubeUrl: 'https://youtu.be/lVAWSK3LR8U',
         tags: ['Gaming', 'Montage', 'Effects']
-      }
-    ],
-    creativeEdits: [
+      },
       {
         title: 'Personal Edit Showcase',
         description: 'Creative personal edits with dynamic transitions and effects',
@@ -32,6 +30,8 @@ export function Projects() {
         youtubeUrl: 'https://youtu.be/pGoc4ZL9I8E',
         tags: ['Style Edit', 'Visual Effects', 'Creative']
       },
+    ],
+    creativeEdits: [
       {
         title: 'Travel Vlog',
         description: 'Engaging travel vlog with cinematic elements',
@@ -58,6 +58,13 @@ export function Projects() {
     ],
     musicAndLyrics: [
       {
+        title: 'Lyric Video Animation',
+        description: 'Animated lyric video with dynamic typography',
+        image: '/assets/logo.png',
+        youtubeUrl: 'https://youtu.be/RkoMIFnEBfk',
+        tags: ['Lyrics', 'Animation', 'Typography']
+      },
+      {
         title: 'Music Video Production',
         description: 'Professional music video with artistic direction',
         image: '/assets/logo.png',
@@ -70,13 +77,6 @@ export function Projects() {
         image: '/assets/ice.png',
         youtubeUrl: 'https://youtu.be/3aTZFb7hopo',
         tags: ['Music', 'Creative Edit', 'Visual']
-      },
-      {
-        title: 'Lyric Video Animation',
-        description: 'Animated lyric video with dynamic typography',
-        image: '/assets/logo.png',
-        youtubeUrl: 'https://youtu.be/RkoMIFnEBfk',
-        tags: ['Lyrics', 'Animation', 'Typography']
       },
       {
         title: 'Stylized Lyric Video',
