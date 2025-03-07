@@ -8,54 +8,6 @@ import { BeforeAfter } from '../components/BeforeAfter'
 export function Projects() {
   const navigate = useNavigate()
   const projectsByCategory = {
-    gaming: [
-      {
-        title: 'Gaming Highlights',
-        description: 'Dynamic gaming montage with effects and synced editing',
-        image: '/assets/Blank.png',
-        youtubeUrl: 'https://youtu.be/lVAWSK3LR8U',
-        tags: ['Gaming', 'Montage', 'Effects']
-      },
-      {
-        title: 'Personal Edit Showcase',
-        description: 'Creative personal edits with dynamic transitions and effects',
-        image: '/assets/Blank.png',
-        youtubeUrl: 'https://youtu.be/6RrEFgfeRZk',
-        tags: ['Personal Edit', 'Creative', 'Transitions']
-      },
-      {
-        title: 'Personal Style Edit',
-        description: 'Stylized personal content with unique visual approach',
-        image: '/assets/cloud.jpg',
-        youtubeUrl: 'https://youtu.be/pGoc4ZL9I8E',
-        tags: ['Style Edit', 'Visual Effects', 'Creative']
-      },
-    ],
-    creativeEdits: [
-      {
-        title: 'Travel Vlog',
-        description: 'Engaging travel vlog with cinematic elements',
-        image: '/assets/cloud.jpg',
-        youtubeUrl: 'https://youtu.be/mGiBTbxCUgU',
-        tags: ['Vlog', 'Travel', 'Cinematic']
-      }
-    ],
-    documentaries: [
-      {
-        title: 'Documentary: Myanmar Culture',
-        description: 'Cultural documentary showcasing Myanmar traditions',
-        image: '/assets/Dee.png',
-        youtubeUrl: 'https://youtu.be/0ZoOiiw5wdY',
-        tags: ['Documentary', 'Culture', 'Storytelling']
-      },
-      {
-        title: 'Documentary: Local Stories',
-        description: 'Documentary highlighting local perspectives and stories',
-        image: '/assets/ice.png',
-        youtubeUrl: 'https://youtu.be/hlLhxgE9xxk',
-        tags: ['Documentary', 'Local Stories', 'Cinematography']
-      }
-    ],
     musicAndLyrics: [
       {
         title: 'Lyric Video Animation',
@@ -71,6 +23,55 @@ export function Projects() {
         youtubeUrl: 'https://youtu.be/iq9HcvgWD8Q',
         tags: ['Music Video', 'Production', 'Artistic']
       },
+    ],
+    gaming: [
+      {
+        title: 'Gaming Highlights',
+        description: 'Dynamic gaming montage with effects and synced editing',
+        image: '/assets/Blank.png',
+        youtubeUrl: 'https://youtu.be/lVAWSK3LR8U',
+        tags: ['Gaming', 'Montage', 'Effects']
+      },
+      
+    ],
+    documentaries: [
+      {
+        title: 'Travel Vlog',
+        description: 'Engaging travel vlog with cinematic elements',
+        image: '/assets/cloud.jpg',
+        youtubeUrl: 'https://youtu.be/mGiBTbxCUgU',
+        tags: ['Vlog', 'Travel', 'Cinematic']
+      },
+      {
+        title: 'Documentary: Myanmar Culture',
+        description: 'Cultural documentary showcasing Myanmar traditions',
+        image: '/assets/Dee.png',
+        youtubeUrl: 'https://youtu.be/0ZoOiiw5wdY',
+        tags: ['Documentary', 'Culture', 'Storytelling']
+      },
+      {
+        title: 'Documentary: Local Stories',
+        description: 'Documentary highlighting local perspectives and stories',
+        image: '/assets/ice.png',
+        youtubeUrl: 'https://youtu.be/hlLhxgE9xxk',
+        tags: ['Documentary', 'Local Stories', 'Cinematography']
+      }
+    ],
+    creativeEdits: [
+      {
+        title: 'Personal Edit Showcase',
+        description: 'Creative personal edits with dynamic transitions and effects',
+        image: '/assets/Blank.png',
+        youtubeUrl: 'https://youtu.be/6RrEFgfeRZk',
+        tags: ['Personal Edit', 'Creative', 'Transitions']
+      },
+      {
+        title: 'Personal Style Edit',
+        description: 'Stylized personal content with unique visual approach',
+        image: '/assets/cloud.jpg',
+        youtubeUrl: 'https://youtu.be/pGoc4ZL9I8E',
+        tags: ['Style Edit', 'Visual Effects', 'Creative']
+      },
       {
         title: 'Creative Music Edit',
         description: 'Creative edit combining music and visual elements',
@@ -85,7 +86,7 @@ export function Projects() {
         youtubeUrl: 'https://youtu.be/uRxyxgrxKEw',
         tags: ['Lyrics', 'Style', 'Effects']
       }
-    ]
+    ],
   }
 
   const sectionVariants = {
@@ -99,14 +100,49 @@ export function Projects() {
         <FiArrowLeft className="text-white text-2xl" />
       </button>
       <div className="max-w-7xl mx-auto space-y-16">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-white text-center md:text-start mb-12"
+        <div className="relative mb-16">
+          <motion.h1
+            className="text-5xl font-extrabold text-center mb-2 relative z-10"
+          >
+            {"PROJECTS I COOKED".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.05,
+                  ease: "easeOut" 
+                }}
+                className="inline-block mx-[1px] bg-clip-text text-transparent bg-gradient-to-r from-green-500 via-yellow-400 to-green-600"
+                style={{
+                  textShadow: "0 0 15px rgba(0,255,0,0.3), 0 0 20px rgba(0,255,0,0.2)"
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.h1>
+        </div>
+
+        {/* Music & Lyrics Section */}
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="space-y-8"
         >
-          My Projects
-        </motion.h1>
+          <h2 className="text-3xl font-semibold text-white text-center">Music & Lyrics</h2>
+          <Carousel
+            items={projectsByCategory.musicAndLyrics.map((project, index) => (
+              <div key={index} className="px-4">
+                <ProjectCard {...project} />
+              </div>
+            ))}
+          />
+        </motion.section>
+
         {/* Gaming Section */}
         <motion.section
           variants={sectionVariants}
@@ -118,24 +154,6 @@ export function Projects() {
           <h2 className="text-3xl font-semibold text-white text-center">Gaming Edits</h2>
           <Carousel
             items={projectsByCategory.gaming.map((project, index) => (
-              <div key={index} className="px-4">
-                <ProjectCard {...project} />
-              </div>
-            ))}
-          />
-        </motion.section>
-
-        {/* Creative Edits Section */}
-        <motion.section
-          variants={sectionVariants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="space-y-8"
-        >
-          <h2 className="text-3xl font-semibold text-white text-center">Creative Edits</h2>
-          <Carousel
-            items={projectsByCategory.creativeEdits.map((project, index) => (
               <div key={index} className="px-4">
                 <ProjectCard {...project} />
               </div>
@@ -161,7 +179,7 @@ export function Projects() {
           />
         </motion.section>
 
-        {/* Music & Lyrics Section */}
+        {/* Creative Edits Section */}
         <motion.section
           variants={sectionVariants}
           initial="initial"
@@ -169,9 +187,9 @@ export function Projects() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <h2 className="text-3xl font-semibold text-white text-center">Music & Lyrics</h2>
+          <h2 className="text-3xl font-semibold text-white text-center">Creative Edits</h2>
           <Carousel
-            items={projectsByCategory.musicAndLyrics.map((project, index) => (
+            items={projectsByCategory.creativeEdits.map((project, index) => (
               <div key={index} className="px-4">
                 <ProjectCard {...project} />
               </div>

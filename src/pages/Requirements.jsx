@@ -7,20 +7,23 @@ export function Requirements() {
   const { langData } = useLanguageContext();
   const navigate = useNavigate();
 
+  // Animation variants for container
   const containerVariants = {
     initial: { opacity: 0 },
     whileInView: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.1
       }
     }
   }
 
+  // Animation variants for items
   const itemVariants = {
-    initial: { opacity: 0 },
+    initial: { opacity: 0, y: 20 },
     whileInView: {
       opacity: 1,
+      y: 0,
       transition: {
         duration: 0.5
       }
@@ -28,40 +31,102 @@ export function Requirements() {
     viewport: { once: true, amount: 0.1 }
   }
 
+  // Breaking Bad style text animation
+  const textVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { staggerChildren: 0.03 } }
+  };
+
+  const letterVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        type: "spring", 
+        damping: 12,
+        stiffness: 200
+      } 
+    }
+  };
+
+  // Function to create animated text with Breaking Bad style
+  const AnimatedText = ({ text, className }) => {
+    return (
+      <motion.span 
+        className={className}
+        variants={textVariants}
+        initial="initial"
+        animate="animate"
+      >
+        {Array.from(text).map((letter, index) => (
+          <motion.span
+            key={index}
+            variants={letterVariants}
+            className="inline-block"
+            style={{
+              textShadow: '0 0 8px rgba(144, 238, 144, 0.6)',
+              color: index % 2 === 0 ? '#90EE90' : '#FFFF00'
+            }}
+          >
+            {letter === ' ' ? '\u00A0' : letter}
+          </motion.span>
+        ))}
+      </motion.span>
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-[#060606] text-white overflow-x-hidden relative pb-4">
-      <button onClick={() => navigate(-1)} className='absolute top-2 left-2 z-40 cursor-pointer'>
+    <div className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#111111] text-white overflow-x-hidden relative pb-4">
+      <div className="absolute inset-0 bg-[url('./assets/cloud.jpg')] bg-cover bg-center opacity-10 z-0"></div>
+      
+      <button 
+        onClick={() => navigate(-1)} 
+        className='absolute top-4 left-4 z-40 cursor-pointer bg-black/30 p-2 rounded-full hover:bg-black/50 transition-all duration-300'
+      >
         <FiArrowLeft className="text-white text-2xl" />
       </button>
+      
       <motion.div
         variants={containerVariants}
         initial="initial"
         whileInView="whileInView"
         viewport={{ once: true, amount: 0.1 }}
-        className="max-w-6xl mx-auto px-2 lg:px-4 py-4 lg:py-16"
+        className="max-w-6xl mx-auto px-4 lg:px-8 py-8 lg:py-16 relative z-10"
       >
-        <motion.h2
-          variants={itemVariants}
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true, amount: 0.1 }}
-          className="text-4xl font-bold text-center mb-6 lg:mb-16"
-        >
-          {langData.requirements?.title || 'Requirements'}
-        </motion.h2>
-
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="text-center mb-12"
+        >
+          <h2 className="text-5xl font-bold mb-4 hidden">
+            {langData.requirements?.title || 'Requirements'}
+          </h2>
+          <AnimatedText 
+            text={langData.requirements?.title || 'Requirements'} 
+            className="text-5xl font-bold block mb-4"
+          />
+          <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-yellow-300 mx-auto rounded-full"></div>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {langData.requirements?.items?.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-[#111111] p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              variants={itemVariants}
+              whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+              className="bg-black/40 backdrop-blur-sm p-6 rounded-lg border border-green-900/30 shadow-lg hover:shadow-green-900/20 transition-all duration-300"
+              style={{
+                boxShadow: '0 4px 20px rgba(0, 255, 0, 0.1)',
+              }}
             >
-              <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-              <p className="text-gray-300">{item.description}</p>
-            </div>
+              <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-green-400 to-yellow-300 bg-clip-text text-transparent">
+                {item.title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed">{item.description}</p>
+            </motion.div>
           )) || (
             <div className="col-span-full text-center text-gray-300">
               Requirements content will be available soon.
