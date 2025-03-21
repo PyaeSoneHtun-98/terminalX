@@ -23,6 +23,27 @@ export function Projects() {
         youtubeUrl: 'https://youtu.be/iq9HcvgWD8Q',
         tags: ['Music Video', 'Production', 'Artistic']
       },
+      {
+        title: 'Music Video Production',
+        description: 'Professional music video with artistic direction',
+        image: '/assets/logo.png',
+        youtubeUrl: 'https://youtu.be/PLCHlqNsQKc',
+        tags: ['Music Video', 'Production', 'Artistic']
+      },
+      {
+        title: 'Music Video Production',
+        description: 'Professional music video with artistic direction',
+        image: '/assets/logo.png',
+        youtubeUrl: 'https://youtu.be/6nrJi83cxZ8',
+        tags: ['Music Video', 'Production', 'Artistic']
+      },
+      {
+        title: 'Music Video Production',
+        description: 'Professional music video with artistic direction',
+        image: '/assets/logo.png',
+        youtubeUrl: 'https://youtu.be/S-3fgCKY1DQ',
+        tags: ['Music Video', 'Production', 'Artistic']
+      },
     ],
     gaming: [
       {
@@ -30,6 +51,13 @@ export function Projects() {
         description: 'Dynamic gaming montage with effects and synced editing',
         image: '/assets/Blank.png',
         youtubeUrl: 'https://youtu.be/lVAWSK3LR8U',
+        tags: ['Gaming', 'Montage', 'Effects']
+      },
+      {
+        title: 'Gaming Highlights',
+        description: 'Dynamic gaming montage with effects and synced editing',
+        image: '/assets/Blank.png',
+        youtubeUrl: 'https://youtu.be/6rWF9es1wss',
         tags: ['Gaming', 'Montage', 'Effects']
       },
       

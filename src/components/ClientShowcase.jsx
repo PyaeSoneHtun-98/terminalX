@@ -7,40 +7,34 @@ export function ClientShowcase() {
   const [activeClient, setActiveClient] = useState(null)
   const channels = [
     {
-      logo: '/assets/channel1.png',
-      name: 'Channel 1',
-      youtubeUrl: 'https://youtube.com/channel1',
-      subscribers: '1.2M Subscribers'
+      logo: 'https://yt3.googleusercontent.com/deRV5yzdapSi1UWFDeoTgnHy3jdje8PaFfVLsvTtXn5-VeZ-R48wmbsledA001h5e6ruDdeC1kI=s160-c-k-c0x00ffffff-no-rj',
+      name: 'ICE ICE',
+      youtubeUrl: 'https://youtube.com/@iceiceofficialyoutubechannel?si=GTOER-FHFU1kmD0H',
     },
     {
-      logo: '/assets/channel2.png',
-      name: 'Channel 2',
-      youtubeUrl: 'https://youtube.com/channel2',
-      subscribers: '850K Subscribers'
+      logo: 'https://yt3.googleusercontent.com/yDTVe9LnEv_ufQi1PHITmPOUIilNTCC5nB-9m9y3ULYVb4rw98fN4Oh9yhGH6TlIS9LIJfpP7zk=s160-c-k-c0x00ffffff-no-rj',
+      name: 'KAST',
+      youtubeUrl: 'https://youtube.com/@kast_official?si=YJKM5ypOyDpudHWS',
     },
     {
-      logo: '/assets/channel3.png',
-      name: 'Channel 3',
-      youtubeUrl: 'https://youtube.com/channel3',
-      subscribers: '2M Subscribers'
+      logo: 'https://yt3.googleusercontent.com/Epinrrj7jBb0L26eoDPPn7MIoGC8kt6QjmuEtlwaRYDOPtbYY8jGqS7xh7_G28cUf8SrRYEXNA=s160-c-k-c0x00ffffff-no-rj',
+      name: 'kz',
+      youtubeUrl: 'https://youtube.com/@kzbeatzmyanmar?si=Gbh3uE2xKpuOiWhz',
     },
     {
-      logo: '/assets/channel4.png',
-      name: 'Channel 4',
-      youtubeUrl: 'https://youtube.com/channel4',
-      subscribers: '500K Subscribers'
+      logo: 'https://yt3.googleusercontent.com/9ZOcsn1smJFMf-oJPUwGl02cwfPixUndlzUuEJ3zIr1cPdhsk3yIt6Ux3M167tjQfHbweqzY=s160-c-k-c0x00ffffff-no-rj',
+      name: 'MLBB',
+      youtubeUrl: 'https://youtube.com/@mobilelegendsbangbangchann6106?si=Lx-5TDAUYpPXcZxa',
     },
     {
-      logo: '/assets/channel5.png',
-      name: 'Channel 5',
-      youtubeUrl: 'https://youtube.com/channel5',
-      subscribers: '1.5M Subscribers'
+      logo: 'https://yt3.ggpht.com/-NJkD_HV23C3SIgmOsQKYI0N3lzzk50NFTax7N9U5YBXpF5rPwMBSv2kvHupZ4H4IegRxtoUYw=s88-c-k-c0x00ffffff-no-rj',
+      name: 'Mythic Seal',
+      youtubeUrl: 'https://youtu.be/YPyjTo2Dk9g?si=1XT25rEtEfmlQBXc',
     },
     {
-      logo: '/assets/channel6.png',
-      name: 'Channel 6',
-      youtubeUrl: 'https://youtube.com/channel6',
-      subscribers: '750K Subscribers'
+      logo: 'https://yt3.ggpht.com/UI1wZIJ4BDKlpMmKsEg7SSQ4aK-yDL83uk9CyTX24PbjTfuVy1JN0ywT-Ae_B8BGIZ_GJ14y=s88-c-k-c0x00ffffff-no-rj',
+      name: 'OLD ERA',
+      youtubeUrl: 'https://youtu.be/RkoMIFnEBfk?si=P7Nh4YtCquLd9iIi',
     }
   ]
 
@@ -70,10 +64,9 @@ export function ClientShowcase() {
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-opacity duration-300 flex items-center justify-center">
+              <div className="-z-10 group-hover:z-10 absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-75 transition-opacity duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                   <h3 className="text-lg font-bold text-white text-center mb-2">{channel.name}</h3>
-                  <p className="text-sm text-gray-300 text-center">{channel.subscribers}</p>
                 </div>
               </div>
             </div>

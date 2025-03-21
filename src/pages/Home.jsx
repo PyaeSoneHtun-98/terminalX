@@ -24,7 +24,7 @@ export function Home() {
     }}>
       <div className="flex flex-col md:flex-row h-full relative">
         {/* 3D Canvas */}
-        <div className="w-full h-[70vh] md:w-full md:h-full md:ml-72 order-1 md:order-2">
+        <div className="w-full h-[70vh] md:w-full md:h-full md:ml-72 order-1 md:order-2 -translate-y-36">
           <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
             <ambientLight intensity={0.8} />
             <directionalLight position={[5, 5, 5]} intensity={1.2} />

@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { useSpring, animated } from '@react-spring/three'
 
 export function Computer() {
-  const computer = useGLTF('./assets/computer.glb')
+  const computer = useGLTF('./assets/terminalx.glb')
   const { scene, animations } = computer
 
   const [scale, setScale] = useState(1.5) // Default scale
@@ -12,9 +12,9 @@ export function Computer() {
   useEffect(() => {
     const updateScale = () => {
       if (window.innerWidth < 768) {
-        setScale(1) // Reduce size on mobile (screen width < 768px)
+        setScale(4) // Reduce size on mobile (screen width < 768px)
       } else {
-        setScale(1.5) // Default size for larger screens
+        setScale(5.5) // Default size for larger screens
       }
     }
 
