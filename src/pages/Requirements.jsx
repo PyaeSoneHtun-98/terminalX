@@ -64,10 +64,6 @@ export function Requirements() {
             key={index}
             variants={letterVariants}
             className="inline-block"
-            style={{
-              textShadow: '0 0 8px rgba(144, 238, 144, 0.6)',
-              color: index % 2 === 0 ? '#90EE90' : '#FFFF00'
-            }}
           >
             {letter === ' ' ? '\u00A0' : letter}
           </motion.span>
@@ -77,12 +73,10 @@ export function Requirements() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0a0a0a] to-[#111111] text-white overflow-x-hidden relative pb-4">
-      <div className="absolute inset-0 bg-[url('./assets/cloud.jpg')] bg-cover bg-center opacity-10 z-0"></div>
-      
+    <div className="min-h-screen text-white overflow-x-hidden relative pb-4">      
       <button 
         onClick={() => navigate(-1)} 
-        className='absolute top-4 left-4 z-40 cursor-pointer bg-black/30 p-2 rounded-full hover:bg-black/50 transition-all duration-300'
+        className='absolute top-4 left-4 z-40 cursor-pointer p-2 rounded-full hover:bg-black/50 transition-all duration-300'
       >
         <FiArrowLeft className="text-white text-2xl" />
       </button>
@@ -98,14 +92,14 @@ export function Requirements() {
           variants={itemVariants}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold mb-4 hidden">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 hidden">
             {langData.requirements?.title || 'Requirements'}
           </h2>
           <AnimatedText 
             text={langData.requirements?.title || 'Requirements'} 
-            className="text-5xl font-bold block mb-4"
+            className="text-3xl md:text-5xl font-bold block mb-4"
           />
-          <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-yellow-300 mx-auto rounded-full"></div>
+          <div className="h-1 w-32 bg-white mx-auto rounded-full"></div>
         </motion.div>
 
         <motion.div
@@ -118,11 +112,8 @@ export function Requirements() {
               variants={itemVariants}
               whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
               className="bg-black/40 backdrop-blur-sm p-6 rounded-lg border border-green-900/30 shadow-lg hover:shadow-green-900/20 transition-all duration-300"
-              style={{
-                boxShadow: '0 4px 20px rgba(0, 255, 0, 0.1)',
-              }}
             >
-              <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-green-400 to-yellow-300 bg-clip-text text-transparent">
+              <h3 className="text-2xl font-semibold mb-4">
                 {item.title}
               </h3>
               <p className="text-gray-300 leading-relaxed">{item.description}</p>

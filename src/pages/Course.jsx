@@ -22,7 +22,7 @@ export function Course() {
         >
           <div className="relative mb-8">
             <motion.h1
-              className="text-6xl md:text-8xl font-extrabold text-center relative z-10"
+              className="text-4xl md:text-8xl font-extrabold text-center relative z-10"
             >
               {"COMING SOON".split("").map((char, index) => (
                 <motion.span
@@ -34,10 +34,7 @@ export function Course() {
                     delay: index * 0.05,
                     ease: "easeOut" 
                   }}
-                  className="inline-block mx-[1px] bg-clip-text text-transparent bg-gradient-to-r from-green-500 via-yellow-400 to-green-600"
-                  style={{
-                    textShadow: "0 0 15px rgba(0,255,0,0.3), 0 0 20px rgba(0,255,0,0.2)"
-                  }}
+                  className="inline-block mx-[1px] bg-clip-text text-white"
                 >
                   {char === " " ? "\u00A0" : char}
                 </motion.span>
@@ -48,7 +45,7 @@ export function Course() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="mt-6 text-xl md:text-2xl text-gray-400"
+            className="mt-6 text-sm md:text-2xl text-gray-400"
           >
             Get ready for an amazing learning experience
           </motion.p>
