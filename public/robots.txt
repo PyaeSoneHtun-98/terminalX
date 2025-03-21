@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://terminalx.vercel.app/sitemap.xml
