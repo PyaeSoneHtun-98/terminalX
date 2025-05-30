@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { useSpring, animated } from '@react-spring/three'
 
 export function Computer() {
-  const computer = useGLTF('/assets/terminalx.glb')
+  const computer = useGLTF('/assets/terminalx-optimized.glb')
   const { scene, animations } = computer
 
   const [scale, setScale] = useState(1.5) // Default scale
