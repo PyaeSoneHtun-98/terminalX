@@ -17,9 +17,9 @@ export function ClientShowcase() {
       youtubeUrl: 'https://youtube.com/@kast_official?si=YJKM5ypOyDpudHWS',
     },
     {
-      logo: 'https://yt3.googleusercontent.com/Epinrrj7jBb0L26eoDPPn7MIoGC8kt6QjmuEtlwaRYDOPtbYY8jGqS7xh7_G28cUf8SrRYEXNA=s160-c-k-c0x00ffffff-no-rj',
-      name: 'kz',
-      youtubeUrl: 'https://youtube.com/@kzbeatzmyanmar?si=Gbh3uE2xKpuOiWhz',
+      logo: 'https://yt3.googleusercontent.com/UEI4aBs9t9JhRbldOgJapJpGt6P7Uz10Y9N_2Aip9Fae1CbzCnERaw7spD0PZJHHXzUqr13I=s160-c-k-c0x00ffffff-no-rj',
+      name: 'Gunn',
+      youtubeUrl: 'https://www.youtube.com/channel/UC6OvLpTRIZnzYKqSpPb61tA',
     },
     {
       logo: 'https://yt3.googleusercontent.com/9ZOcsn1smJFMf-oJPUwGl02cwfPixUndlzUuEJ3zIr1cPdhsk3yIt6Ux3M167tjQfHbweqzY=s160-c-k-c0x00ffffff-no-rj',

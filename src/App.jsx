@@ -29,7 +29,7 @@ function App() {
       <Router>
         {loading && <Preloader />}
         <LanguageSwitch />
-        <div className="min-h-screen bg-black relative">
+        <div className="min-h-screen bg-[#FAF0E6] relative">
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />

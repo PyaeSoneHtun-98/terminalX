@@ -8,25 +8,13 @@ export function Computer() {
   const { scene, animations } = computer
 
   const [scale, setScale] = useState(1.5) // Default scale
+  const [positionX, setPositionX] = useState(1.2)
+  const [positionY, setPositionY] = useState(0.5)
 
-  useEffect(() => {
-    const updateScale = () => {
-      if (window.innerWidth < 768) {
-        setScale(4) // Reduce size on mobile (screen width < 768px)
-      } else {
-        setScale(5.5) // Default size for larger screens
-      }
-    }
-
-    updateScale() // Initial check
-    window.addEventListener('resize', updateScale) // Listen for window resize
-
-    return () => window.removeEventListener('resize', updateScale)
-  }, [])
-
+  // Spring animation for vertical float
   const spring = useSpring({
     from: { y: 4 },
-    to: { y: -0.5 },
+    to: { y: positionY },
     config: {
       mass: 2,
       tension: 200,
@@ -34,6 +22,22 @@ export function Computer() {
     }
   })
 
+  // Responsive handling for scale and position
+  useEffect(() => {
+    const updateView = () => {
+      const isMobile = window.innerWidth < 768
+
+      setScale(isMobile ? 4 : 5.5)
+      setPositionX(isMobile ? 0 : 1.2)
+      setPositionY(isMobile ? 2.5 : 0.5)
+    }
+
+    updateView()
+    window.addEventListener('resize', updateView)
+    return () => window.removeEventListener('resize', updateView)
+  }, [])
+
+  // Handle model animations
   useEffect(() => {
     const mixer = new THREE.AnimationMixer(scene)
     animations.forEach((clip) => {
@@ -54,11 +58,12 @@ export function Computer() {
 
   return (
     <animated.primitive 
-      object={scene} 
-      scale={scale}  // Dynamic scale based on screen width
+      object={scene}
+      scale={scale}
+      position-x={positionX}
       position-y={spring.y}
-      position-x={0}
       position-z={0}
+      rotation={[0, -Math.PI / 2 - 0.05, 0]} // ~ -85 degrees
     />
   )
 }

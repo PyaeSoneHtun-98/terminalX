@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import { langDataEN, langDataMM, alertsEN, alertsMM, dLabelsEN, dLabelsMM } from "./LanguageData";
-import "../fonts/fonts.css";
 
 const Context = createContext();
 
