@@ -26,6 +26,7 @@ export const langDataEN = {
     hero: {
         me: "About Me",
         projects: "Projects",
+        projects_cooked: "Projects I Cooked",
         services: "Services",
         course: "Courses",
         requirements: "Work With Me"
@@ -109,6 +110,7 @@ export const langDataMM = {
     hero: {
         me: "ကျွန်တော့်အကြောင်း",
         projects: "ပရောဂျက်များ",
+        projects_cooked: "လုပ်ခဲ့ဖူးသော ပရောဂျက်များ",
         services: "ဝန်ဆောင်မှုများ",
         course: "သင်တန်းများ",
         requirements: "အလုပ်အပ်ရန်"

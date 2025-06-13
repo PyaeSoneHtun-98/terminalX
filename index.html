@@ -340,10 +340,27 @@
       </div>
     </div>
     <script>
-      window.onload = function () {
+      // Prefetch GLB assets before mounting React
+      const glbUrls = [
+        '/assets/room.glb',
+        '/assets/terminalx-optimized.glb'
+      ];
+      function fetchGLB(url) {
+        return fetch(url).then(res => {
+          if (!res.ok) throw new Error('Failed to load ' + url);
+          return res.arrayBuffer();
+        });
+      }
+      Promise.all(glbUrls.map(fetchGLB)).then(() => {
         document.getElementById('root').classList.remove('loading');
-      };
+        // Dynamically load React app
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = '/src/main.jsx';
+        document.body.appendChild(script);
+      }).catch(err => {
+        document.getElementById('root').innerHTML = '<div style="color:white;text-align:center;margin-top:2em;">Failed to load assets. Please refresh.</div>';
+      });
     </script>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

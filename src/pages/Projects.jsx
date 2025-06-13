@@ -4,9 +4,11 @@ import { Carousel } from '../components/Carousel'
 import { useNavigate } from 'react-router-dom'
 import { FiArrowLeft } from "react-icons/fi"
 import { BeforeAfter } from '../components/BeforeAfter'
+import { useLanguageContext } from '../globals/ContextProvider'
 
 export function Projects() {
   const navigate = useNavigate()
+  const { langData } = useLanguageContext()
   const projectsByCategory = {
     musicAndLyrics: [
       {
@@ -130,23 +132,12 @@ export function Projects() {
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="relative mb-16">
           <motion.h1
-            className="text-5xl font-extrabold text-center mb-2 relative z-10"
+            className="text-5xl text-white font-extrabold text-center mb-2 relative z-10"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
           >
-            {"PROJECTS I COOKED".split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: index * 0.05,
-                  ease: "easeOut" 
-                }}
-                className="inline-block mx-[1px] bg-clip-text text-white"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
+            {langData.hero.projects_cooked}
           </motion.h1>
         </div>
 
