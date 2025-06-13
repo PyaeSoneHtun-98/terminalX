@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { useSpring, animated } from '@react-spring/three'
 
-export function Computer({ onLoad }) {
+export function Computer() {
   const computer = useGLTF('/assets/terminalx-optimized.glb')
   const { scene, animations } = computer
-  const [scale, setScale] = useState(1.5)
+
+  const [scale, setScale] = useState(1.5) // Default scale
   const [positionX, setPositionX] = useState(1.2)
   const [positionY, setPositionY] = useState(0.5)
 
@@ -55,12 +56,6 @@ export function Computer({ onLoad }) {
     }
   }, [scene, animations])
 
-  useEffect(() => {
-    if (scene) {
-      onLoad?.()
-    }
-  }, [scene, onLoad])
-
   return (
     <animated.primitive 
       object={scene}
@@ -68,7 +63,7 @@ export function Computer({ onLoad }) {
       position-x={positionX}
       position-y={spring.y}
       position-z={0}
-      rotation={[0, -Math.PI / 2 - 0.05, 0]}
+      rotation={[0, -Math.PI / 2 - 0.05, 0]} // ~ -85 degrees
     />
   )
 }

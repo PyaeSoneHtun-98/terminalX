@@ -1,15 +1,9 @@
 import { useGLTF } from '@react-three/drei'
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 
-export function Room({ onLoad }) {
+export function Room() {
   const roomRef = useRef()
   const { scene } = useGLTF('/assets/room2.glb')
-
-  useEffect(() => {
-    if (scene) {
-      onLoad?.()
-    }
-  }, [scene, onLoad])
 
   return (
     <primitive 
@@ -21,4 +15,4 @@ export function Room({ onLoad }) {
   )
 }
 
-useGLTF.preload('/assets/room2.glb')
+useGLTF.preload('/assets/room.glb') 
