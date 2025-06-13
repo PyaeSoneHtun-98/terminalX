@@ -7,27 +7,15 @@ import { Projects } from './pages/Projects'
 import { Services } from './pages/Services'
 import { Requirements } from './pages/Requirements'
 import { Course } from './pages/Course'
-import { Preloader } from './components/Preloader'
 import { ContextProvider } from './globals/ContextProvider.jsx'
 import { LanguageSwitch } from './components/LanguageSwitch.jsx'
 import { Footer } from './components/Footer'
 
 function App() {
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    // Simulate loading time for 3D assets
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-
-    return () => clearTimeout(timer)
-  }, [])
 
   return (
     <ContextProvider>
       <Router>
-        {loading && <Preloader />}
         <LanguageSwitch />
         <div className="min-h-screen bg-black relative">
           <AnimatePresence mode="wait">

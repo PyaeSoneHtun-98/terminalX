@@ -77,7 +77,7 @@ export function AboutMe() {
           {/* About Text */}
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-2xl font-semibold text-white">{langData.about.subtitle}</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-sm md:text-base">
               {langData.about.description}
             </p>
             <motion.button

@@ -33,9 +33,8 @@ export const langDataEN = {
     about: {
         title: "ABOUT ME",
         subtitle: "Working With Me",
-        description: "In 2018 I found about gaming memes so I also wanted to create memes then I learned about editing to create memes with my Honor 7A using Kinemaster. After creating around 10 memes I noticed my memes are missing something. It's shake so I learned how can I add shakes on my memes then I found Alight Motion. I created meme videos and gaming highlights for Yato and Ardam from 2018 - 2020 using my phone. I got a little money from there so I bought new phone Redmi note 8 pro then I created more video using Kinemaster and Alight Motion from 2020 - 2022 . Early 2022 I started to use Adobe Softwares and Blender with my first Pc then I created many Quality Gmaing Videos for Streamers . Now I'm not interesting in gaming video editing because I use my fully effort when creating gaming videos but the money I get from that is low budget so I decided to quit from Gaming . My next step is to become Professional 3D artist and Motion Graphics Designer and now I'm making videos for Content Creators and Artists.Thanks everyone who support me on this journey.",
         startProject: "Start Your Project",
-        tools: "Tools I Use"
+        description: "In 2018, I first came across gaming memes and I also wanted to create memes. Since then, I started learning editing using my Honor 7A phone and Kinemaster. After making around 10 memes, I felt that my memes were missing something. I realized they needed a Shake Effect and then I found an application called Alight Motion.\nAnd just like that, with my humble old phone, from 2018 to 2020, I created gaming highlights and gaming meme videos for Yato and Ardam. I earned a little money from that, so I bought a new phone, a Redmi Note 8 Pro, and from 2020 to 2022, I continued creating videos using Kinemaster and Alight Motion.  \n\nIn early 2022, with my first PC, I started using Adobe Software and Blender and created many quality gaming videos for streamers.\n\nHowever, now, creating Gaming Videos takes up too much of my time and the income I get from it is very low compared to other fields. Because of this, I grew tired of creating Gaming Videos and left the Gaming Community.\n\nMy next step is to become a Professional 3D Artist and Motion Graphics Designer. Now, I am making videos for Content Creators and Artists.\n\nA special thanks to everyone who has supported and helped me on this journey!",        tools: "Tools I Use"
     },
     services: {
         title: "SERVICES",
@@ -87,12 +86,12 @@ export const langDataMM = {
         title: "လိုအပ်ချက်များ",
         items: [
             {
-                title: "စီမံကိန်း အသေးစိတ်",
-                description: "သင့်စီမံကိန်း၏ ရည်မှန်းချက်များ၊ ဦးတည်ပရိသတ်နှင့် လိုချင်သော ရလဒ်များ အပါအဝင် ရှင်းလင်းသော ဖော်ပြချက်ကို ပေးပါ။"
+                title: "ပရောဂျက် အသေးစိတ်",
+                description: "ပရောဂျက်၏ ရည်မှန်းချက်များ၊ ဦးတည်ပရိသတ်နှင့် လိုချင်သော ရလဒ်များ အပါအဝင် ရှင်းလင်းသော ဖော်ပြချက်ကို ပေးပါ။"
             },
             {
                 title: "အချိန်ဇယားနှင့် ဘတ်ဂျက်",
-                description: "ထိရောက်စွာ စီစဉ်နိုင်ရန် သင့်စီမံကိန်း အချိန်ဇယားနှင့် ဘတ်ဂျက်အတိုင်းအတာကို ဖော်ပြပါ။"
+                description: "ထိရောက်စွာ စီစဉ်နိုင်ရန် သင့်ပရောဂျက်၏ အချိန်ဇယားနှင့် ဘတ်ဂျက်အတိုင်းအတာကို ဖော်ပြပါ။"
             },
             {
                 title: "ကိုးကား ပစ္စည်းများ",
@@ -160,9 +159,9 @@ export const langDataMM = {
         title: "ကျွန်ုပ်၏ Clientများ"
     },
     modal: {
-        title: "စီမံကိန်း လိုအပ်ချက်များ",
-        description: "သင့်စီမံကိန်းကို စတင်ရန် အောက်ပါအချက်များကို ပေးပို့ပါ:\n\n• ရှင်းလင်းသော စီမံကိန်း ရည်ရွယ်ချက်နှင့် ပန်းတိုင်များ\n• အချိန်ဇယား မျှော်မှန်းချက်များ\n• ဘတ်ဂျက် အတိုင်းအတာ\n• ကိုးကား ပစ္စည်းများ (ရှိပါက)\n\nသင့်လိုအပ်ချက်များကို 24 နာရီအတွင်း ပြန်လည်တုံ့ပြန်ပါမည်။",
-        viewProject: "စီမံကိန်းကို ကြည့်ရှုရန်"
+        title: "ပရောဂျက် လိုအပ်ချက်များ", // Changed from စီမံကိန်း
+        description: "သင့်ပရောဂျက်ကို စတင်ရန် အောက်ပါအချက်များကို ပေးပို့ပါ:\n\n• ရှင်းလင်းသော ပရောဂျက်၏ ရည်ရွယ်ချက်နှင့် ပန်းတိုင်များ\n• အချိန်ဇယား မျှော်မှန်းချက်များ\n• ဘတ်ဂျက် အတိုင်းအတာ\n• ကိုးကား ပစ္စည်းများ (ရှိပါက)\n\nသင့်လိုအပ်ချက်များကို 24 နာရီအတွင်း ပြန်လည်တုံ့ပြန်ပါမည်။", // Changed စီမံကိန်း to ပရောဂျက် (twice)
+        viewProject: "ပရောဂျက်ကို ကြည့်ရှုရန်" // Changed from စီမံကိန်း
     },
 };
 

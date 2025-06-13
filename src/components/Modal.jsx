@@ -26,12 +26,6 @@ const SpringModal = ({
             className=" text-white bg-[#18181B] rounded-lg w-full max-w-xl shadow-xl cursor-default relative overflow-hidden"
           >
             <div className="relative z-10">
-              <div
-                className="absolute top-2 text-lg right-2 cursor-pointer text-red-500 hover:text-white hover:bg-red-500 p-3 rounded-full"
-                // onClick={onClose}
-              >
-                <IoMdClose />
-              </div>
               <img
                 src={modalData.imageSrc}
                 alt="Project Screenshot"
@@ -54,7 +48,7 @@ const SpringModal = ({
               >
                 <CiShare1 className="text-white text-lg group-hover:text-indigo-500" />
                 <span className="text-white group-hover:text-indigo-500 text-sm">
-                  View Project
+                  Contact Me
                 </span>
               </div>
             </div>
