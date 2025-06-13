@@ -3,7 +3,7 @@ import { useRef } from 'react'
 
 export function Room() {
   const roomRef = useRef()
-  const { scene } = useGLTF('/assets/room.glb')
+  const { scene } = useGLTF('/assets/room2.glb')
 
   return (
     <primitive 

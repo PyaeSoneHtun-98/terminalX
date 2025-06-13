@@ -92,13 +92,11 @@ export function Requirements() {
           variants={itemVariants}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 hidden">
-            {langData.requirements?.title || 'Requirements'}
-          </h2>
-          <AnimatedText 
-            text={langData.requirements?.title || 'Requirements'} 
+          <h2 
             className="text-3xl md:text-5xl font-bold block mb-4"
-          />
+          >
+            {langData.requirements?.title || 'Requirements'} 
+          </h2>
           <div className="h-1 w-32 bg-white mx-auto rounded-full"></div>
         </motion.div>
 
