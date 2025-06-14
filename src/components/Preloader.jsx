@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Lottie from 'lottie-react'
-// import preloaderData from '../assets/preloader.json'
 import preloaderData from '../../public/assets/preloader.json'
 
-export function Preloader() {
+export function Preloader({ isLoading }) {
   const [percentage, setPercentage] = useState(0)
 
   useEffect(() => {
@@ -13,6 +12,8 @@ export function Preloader() {
 
     return () => clearInterval(interval)
   }, [])
+
+  if (!isLoading) return null
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#111827]">

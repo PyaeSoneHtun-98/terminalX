@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { useSpring, animated } from '@react-spring/three'
 
-export function Computer() {
+export function Computer({ onLoad }) {
   const computer = useGLTF('/assets/terminalx-optimized.glb')
   const { scene, animations } = computer
 
@@ -55,6 +55,12 @@ export function Computer() {
       mixer.stopAllAction()
     }
   }, [scene, animations])
+
+  useEffect(() => {
+    if (scene) {
+      onLoad?.()
+    }
+  }, [scene, onLoad])
 
   return (
     <animated.primitive 
