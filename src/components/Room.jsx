@@ -15,4 +15,4 @@ export function Room() {
   )
 }
 
-useGLTF.preload('/assets/room.glb') 
+useGLTF.preload('/assets/room2.glb') 
