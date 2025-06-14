@@ -1,17 +1,34 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useNavigate } from 'react-router-dom'
-import { Suspense } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 import { Computer } from '../components/Computer'
 import { Room } from '../components/Room'
+import { Preloader } from '../components/Preloader'
 import { motion } from 'framer-motion'
 import { FaFacebook, FaInstagram, FaYoutube, FaTelegram, FaTiktok } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { useLanguageContext } from '../globals/ContextProvider'
+import { useGLTF } from '@react-three/drei'
 
 export function Home() {
   const navigate = useNavigate()
   const { langData } = useLanguageContext()
+
+  // Prefetch both 3D models and show preloader until both are loaded
+  const room = useGLTF('/assets/room2.glb')
+  const computer = useGLTF('/assets/terminalx-optimized.glb')
+  const [ready, setReady] = useState(false)
+
+  useEffect(() => {
+    if (!room.isLoading && !computer.isLoading) {
+      setReady(true)
+    }
+  }, [room.isLoading, computer.isLoading])
+
+  if (!ready) {
+    return <Preloader />
+  }
 
   return (
     <div className='overflow-x-hidden h-[100vh]' style={{ 
