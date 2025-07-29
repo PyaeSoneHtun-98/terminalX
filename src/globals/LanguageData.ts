@@ -4,15 +4,15 @@ export const langDataEN = {
         items: [
             {
                 title: "Project Details",
-                description: "Provide a clear description of your project, including goals, target audience, and desired outcomes."
+                description: "A clear description of the project, including its objectives, direction, style, and desired outcomes."
             },
             {
                 title: "Timeline & Budget",
-                description: "Specify your project timeline and budget range to help us plan effectively."
+                description: "Please provide the project's timeline and budget so we can plan effectively."
             },
             {
                 title: "Reference Materials",
-                description: "Share any reference materials, inspiration, or examples that align with your vision."
+                description: "Share any reference materials, ideas, or examples that align with your vision."
             }
         ]
     },
@@ -77,7 +77,7 @@ export const langDataEN = {
     },
     modal: {
         title: "Project Requirements",
-        description: "To start your project, please provide:\n\n• Clear project objectives and goals\n• Timeline expectations\n• Budget range\n• Reference materials (if any)\n\nI'll review your requirements and respond within 24 hours.",
+        description: "Upon confirmation of the project, an initial 50% payment is required. You will receive the 'blocking stage' of the project within one week. At that point, a further 25% payment will be due. If you have any revisions or changes, you can request them at this time. Once I have sent the final video, the remaining 25% balance must be paid.",
         viewProject: "View Project"
     },
 };
@@ -88,15 +88,15 @@ export const langDataMM = {
         items: [
             {
                 title: "ပရောဂျက် အသေးစိတ်",
-                description: "ပရောဂျက်၏ ရည်မှန်းချက်များ၊ ဦးတည်ပရိသတ်နှင့် လိုချင်သော ရလဒ်များ အပါအဝင် ရှင်းလင်းသော ဖော်ပြချက်ကို ပေးပါ။"
+                description: "ပရောဂျက်၏ ရည်ရွယ်ချက်၊ လုပ်ဆောင်လိုသည့်ပုံစံ၊ ရရှိလိုသော ရလဒ်များ စသည်တို့ကို ရှင်းလင်းစွာ ဖော်ပြပေးရန် လိုအပ်ပါသည်။"
             },
             {
                 title: "အချိန်ဇယားနှင့် ဘတ်ဂျက်",
-                description: "ထိရောက်စွာ စီစဉ်နိုင်ရန် သင့်ပရောဂျက်၏ အချိန်ဇယားနှင့် ဘတ်ဂျက်အတိုင်းအတာကို ဖော်ပြပါ။"
+                description: "ကျွန်ုပ်ဘက်မှ ထိရောက်စွာ စီစဉ်နိုင်ရန်အတွက် ပရောဂျက်အတွက် သတ်မှတ်ထားသော အချိန်ကာလနှင့် ဘတ်ဂျက်ကို ဖော်ပြပေးပါ။"
             },
             {
                 title: "ကိုးကား ပစ္စည်းများ",
-                description: "သင့်မျှော်မှန်းချက်နှင့် ကိုက်ညီသော မည်သည့် ကိုးကားပစ္စည်းများ၊ စိတ်ကူးများ သို့မဟုတ် ဥပမာများကိုမဆို မျှဝေပါ။"
+                description: "သင့်စိတ်ကူးနှင့် ကိုက်ညီသည့် ပုံစံများ၊ စိတ်ကူးစိတ်သန်းများ သို့မဟုတ် နမူနာများကို မျှဝေပေးနိုင်ပါသည်။"
             }
         ]
     },
@@ -108,7 +108,7 @@ export const langDataMM = {
         clients: "အမှုသည်များ"
     },
     hero: {
-        me: "ကျွန်တော့်အကြောင်း",
+        me: "ကျွန်ုပ်အကြောင်း",
         projects: "ပရောဂျက်များ",
         projects_cooked: "လုပ်ခဲ့ဖူးသော ပရောဂျက်များ",
         services: "ဝန်ဆောင်မှုများ",
@@ -162,7 +162,7 @@ export const langDataMM = {
     },
     modal: {
         title: "ပရောဂျက် လိုအပ်ချက်များ", // Changed from စီမံကိန်း
-        description: "သင့်ပရောဂျက်ကို စတင်ရန် အောက်ပါအချက်များကို ပေးပို့ပါ:\n\n• ရှင်းလင်းသော ပရောဂျက်၏ ရည်ရွယ်ချက်နှင့် ပန်းတိုင်များ\n• အချိန်ဇယား မျှော်မှန်းချက်များ\n• ဘတ်ဂျက် အတိုင်းအတာ\n• ကိုးကား ပစ္စည်းများ (ရှိပါက)\n\nသင့်လိုအပ်ချက်များကို 24 နာရီအတွင်း ပြန်လည်တုံ့ပြန်ပါမည်။", // Changed စီမံကိန်း to ပရောဂျက် (twice)
+        description: "ပရောဂျက်ကို အတည်ပြုပြီးသည်နှင့် လုပ်ငန်းစတင်ရန်အတွက် စရန်ငွေ (Deposit) ၅၀% ကို ဦးစွာပေးချေရပါမည်။ တစ်ပတ်အတွင်း ပရောဂျက်၏ blocking stage (မူကြမ်းအဆင့်) ကို လက်ခံရရှိပါမည်။ ထိုအဆင့်တွင် ဒုတိယအရစ်ကျငွေ ၂၅% ကို ထပ်မံပေးချေရမည်ဖြစ်ပြီး ပြုပြင်ပြောင်းလဲလိုသည်များရှိပါက ဤအချိန်တွင် တောင်းဆိုနိုင်ပါသည်။ နောက်ဆုံးဗီဒီယို (Final Video) ကို ပေးပို့ပြီးသည့်အခါ ကျန်ရှိသောငွေ ၂၅% ကို အပြီးသတ်ပေးချေရပါမည်။", // Changed စီမံကိန်း to ပရောဂျက် (twice)
         viewProject: "ပရောဂျက်ကို ကြည့်ရှုရန်" // Changed from စီမံကိန်း
     },
 };
