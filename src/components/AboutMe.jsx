@@ -80,14 +80,6 @@ export function AboutMe() {
             <p className="text-gray-300 leading-relaxed text-sm md:text-base">
               {langData.about.description}
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-6 px-6 py-2 attractive-button rounded-lg cursor-pointer"
-              onClick={() => setIsModalOpen(true)}
-            >
-              {langData.about.startProject}
-            </motion.button>
           </motion.div>
 
           {/* Tools & Skills */}

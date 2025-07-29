@@ -25,7 +25,7 @@ export function Preloader({ isLoading }) {
         />
       </div>
       <div className="mt-4 text-white text-2xl font-bold">
-        loading ...
+        Loading ...
       </div>
     </div>
   )

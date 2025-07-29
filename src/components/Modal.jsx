@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { CiShare1 } from "react-icons/ci";
+import { FaFacebook, FaTelegram } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
 const SpringModal = ({
@@ -25,12 +25,12 @@ const SpringModal = ({
             onClick={(e) => e.stopPropagation()}
             className=" text-white bg-[#18181B] rounded-lg w-full max-w-xl shadow-xl cursor-default relative overflow-hidden"
           >
-            <div className="relative z-10">
-              <img
+            <div className="relative z-10 py-4">
+              {/* <img
                 src={modalData.imageSrc}
                 alt="Project Screenshot"
                 className="w-full h-52 object-cover mb-4 rounded-t-lg"
-              />
+              /> */}
               <h3 className="text-3xl font-bold text-center mb-2 px-6">
                 {modalData.title}
               </h3>
@@ -42,14 +42,27 @@ const SpringModal = ({
                 ))}
               </div>
               <div className="md:p-6 p-4 text-sm md:text-base">{modalData.description}</div>
-              <div
-                className="flex gap-2 pt-3 px-4 md:px-6 w-fit items-center pb-6 cursor-pointer hover:text-indigo-500 group"
-                onClick={() => window.open(modalData.demoLink, "_blank")}
-              >
-                <CiShare1 className="text-white text-lg group-hover:text-indigo-500" />
-                <span className="text-white group-hover:text-indigo-500 text-sm">
-                  Contact Me
-                </span>
+              <div className="flex justify-center gap-6 pt-3 px-4 md:px-6 pb-6">
+                <motion.a 
+                  href="https://www.facebook.com/share/15xC1pXdLY/?mibextid=LQQJ4d" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white hover:text-blue-500 transition-colors duration-300"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <FaFacebook size={24} />
+                </motion.a>
+                <motion.a 
+                  href="https://t.me/terminalxedit" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white hover:text-blue-400 transition-colors duration-300"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <FaTelegram size={24} />
+                </motion.a>
               </div>
             </div>
           </motion.div>

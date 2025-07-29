@@ -27,7 +27,7 @@ export function Computer({ onLoad }) {
     const updateView = () => {
       const isMobile = window.innerWidth < 768
 
-      setScale(isMobile ? 4 : 5.5)
+      setScale(isMobile ? 3 : 5.5)
       setPositionX(isMobile ? 0 : 1.2)
       setPositionY(isMobile ? 2.5 : 0.5)
     }

@@ -12,6 +12,13 @@ export function Projects() {
   const projectsByCategory = {
     musicAndLyrics: [
       {
+        title: 'Music Video Visualizer',
+        description: 'Animated lyric video with dynamic typography',
+        image: '/assets/logo.png',
+        youtubeUrl: 'https://youtu.be/MX7MTfb_V-Y',
+        tags: ['Music', 'Video', 'Visualizer']
+      },
+      {
         title: 'Lyric Video Animation',
         description: 'Animated lyric video with dynamic typography',
         image: '/assets/logo.png',

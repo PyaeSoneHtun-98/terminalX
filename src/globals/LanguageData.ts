@@ -33,8 +33,8 @@ export const langDataEN = {
     },
     about: {
         title: "ABOUT ME",
-        subtitle: "Working With Me",
-        startProject: "Start Your Project",
+        subtitle: "My Journey",
+        startProject: "Work With Me",
         description: "In 2018, I first came across gaming memes and I also wanted to create memes. Since then, I started learning editing using my Honor 7A phone and Kinemaster. After making around 10 memes, I felt that my memes were missing something. I realized they needed a Shake Effect and then I found an application called Alight Motion.\nAnd just like that, with my humble old phone, from 2018 to 2020, I created gaming highlights and gaming meme videos for Yato and Ardam. I earned a little money from that, so I bought a new phone, a Redmi Note 8 Pro, and from 2020 to 2022, I continued creating videos using Kinemaster and Alight Motion.  \n\nIn early 2022, with my first PC, I started using Adobe Software and Blender and created many quality gaming videos for streamers.\n\nHowever, now, creating Gaming Videos takes up too much of my time and the income I get from it is very low compared to other fields. Because of this, I grew tired of creating Gaming Videos and left the Gaming Community.\n\nMy next step is to become a Professional 3D Artist and Motion Graphics Designer. Now, I am making videos for Content Creators and Artists.\n\nA special thanks to everyone who has supported and helped me on this journey!",        tools: "Tools I Use"
     },
     services: {
@@ -117,7 +117,7 @@ export const langDataMM = {
     },
     about: {
         title: "ကျွန်ုပ်အကြောင်း",
-        subtitle: "ကျွန်ုပ်နှင့်အတူ အလုပ်လုပ်ခြင်း",
+        subtitle: "ကျွန်ုပ်နှင့်၏ လမ်းခရီး",
         description: "၂၀၁၈ မှာ gaming meme တွေကိုစတွေ့ပြီး ကျွန်တော်လည်း meme တွေဖန်တီးချင်လာတယ်။ အဲ့ကတည်းက *Honor 7A* ဖုန်းနဲ့ *Kinemaster* သုံးပြီး editing စလေ့လာခဲ့တယ်။ *meme ၁၀ခု* လောက်လုပ်ပြီးတဲ့အခါ ကျွန်တော့် *meme တွေမှာ တစ်ခုခုလိုနေသလိုခံစားခဲ့ရတယ်။ Shake Effect လိုနေမှန်းသိပြီး **Alight Motion* ဆိုတဲ့ Application ကိုရှာတွေ့ခဲ့တယ်။\nအဲ့လိုနဲ့ပဲ ကျနော့် ဖုန်းစုတ်လေးနဲ့\n*၂၀၁၈ ကနေ ၂၀၂၀* အထိ *Yato* နဲ့ *Ardam* တို့အတွက် gaming highlight တွေ gaming meme video တွေဖန်တီးပေးခဲ့တယ်။  အဲ့ဒီကနေ နည်းနည်းပိုက်ဆံရတော့ *Redmi Note 8 Pro* ဖုန်းအသစ်ဝယ်ပြီး *၂၀၂၀ ကနေ ၂၀၂၂* အထိ *Kinemaster* နဲ့ *Alight Motion* သုံးပြီး  video တွေဆက်ဖန်တီးခဲ့ပါတယ်။  \n\n၂၀၂၂ အစောပိုင်း မှာတော့ ကျွန်တော့်ရဲ့ပထမဆုံး PC*နဲ့  Adobe Softwares နဲ့ Blender တွေစသုံးပြီး streamer တွေအတွက် quality gaming video တွေအများကြီးလုပ်ပေးခဲ့ပါတယ်။\n\nဒါပေမယ့် အခုတော့ Gaming Video ဖန်တီးရတာက ကျနော်အတွက် အချိန်ပိုကုန်ပြီး ရတဲ့ ဝင်ငွေကလဲ တခြား နယ်ပယ်တွေနဲ့ ယှဉ်လိုက်ရင် အရမ်းနည်းတာကြောင့် Gaming Video တွေ ဖန်တီးရမာကို စိတ်ကုန်လာခဲ့တာနဲ့ပဲ Gaming Community ကနေ ထွက်ခဲ့ပါတယ်။\n\nကျွန်တော့်ရဲ့နောက်ထပ်ခြေလှမ်းကတော့ Professional 3D Artist နဲ့ Motion Graphics Designer တစ်ယောက်ဖြစ်ဖို့ပါ**။ အခုဆို **Content Creators တွေ၊ Artists တွေအတွက် video တွေဖန်တီးပေးလျှက် ရှိပါတယ်။\n\nဒီခရီးမှာ အားပေးကူညီသူတိုင်းကို အထူးကျေးဇူးတင်ပါတယ်ဗျာ!",
         startProject: "အလုပ်အပ်ရန်",
         tools: "အသုံးပြုသော ဆော့ဖ်ဝဲများ"

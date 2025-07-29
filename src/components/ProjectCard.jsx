@@ -54,7 +54,7 @@ export function ProjectCard({ title, description, image, videoUrl, projectUrl, t
       <div className="pt-3 px-3 pb-2 flex flex-col h-full">
         <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-2 line-clamp-1">{title}</h3>
         <p className="text-gray-300 text-xs sm:text-sm mb-2 sm:mb-3 line-clamp-3">{description}</p>
-        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-1 sm:mb-2 overflow-y-auto">
+        {/* <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-1 sm:mb-2 overflow-y-auto">
           {tags?.map((tag, index) => (
             <span
               key={index}
@@ -63,7 +63,7 @@ export function ProjectCard({ title, description, image, videoUrl, projectUrl, t
               {tag}
             </span>
           ))}
-        </div>
+        </div> */}
         {(videoUrl || projectUrl || youtubeUrl) && (
           <div
             onClick={handleClick}
