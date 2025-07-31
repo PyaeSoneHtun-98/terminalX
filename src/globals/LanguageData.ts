@@ -115,7 +115,7 @@ export const langDataEN = {
 
         logistics: {
             duration: "Course Duration: 2.5 Months (10 Weeks)",
-            schedule: "Schedule: 3 days a week",
+            schedule: "Schedule: 3 days a week, 2 hours a day",
             method: "Teaching Method: Live instruction via screen sharing on Discord.",
             details: "A Telegram group will be created, and since the screen will be recorded during teaching, you can study again from the videos posted in the group chat if you miss a lesson.",
             assignments: "There will be weekly assignments, and a certificate will be awarded to those who complete all assignments.",
@@ -221,7 +221,7 @@ export const langDataMM = {
     // --- REPLACED SECTION START ---
     course: {
         title: "Gaming Video Editing သင်တန်း",
-        subtitle: "(၂ လခွဲ အထူးအစီအစဉ်)",
+        subtitle: "(၂ လခွဲ အစီအစဉ်)",
         description: "Gaming နယ်ပယ်မှာ အရည်အသွေးမြင့် Content တွေ ဖန်တီးချင်သူတိုင်းအတွက်!",
         courseDescription: "ဒီသင်တန်းမှာ gaming video editing ကို အခြေခံကနေ အဆင့်မြင့်အထိ သင်ကြားပေးမှာဖြစ်ပြီး သင်ကိုယ်တိုင် လုပ်နိုင်အောင် တတ်မြောက်စေမှာပါ။ အရည်အသွေးမြင့် gameplay edit တွေဖန်တီးဖို့ လိုအပ်တဲ့ အခြေခံကျွမ်းကျင်မှုတွေကို သင်ယူရရှိမှာပါ။",
 
@@ -235,7 +235,7 @@ export const langDataMM = {
         },
 
         curriculum: {
-            title: "ဘာတွေ ကျွမ်းကျင်သွားမှာလဲ?",
+            title: "ဘာတွေ သင်ပြသွားမှာလဲ?",
             items: [
                 "Adobe Premiere Pro",
                 "Adobe After Effects",
@@ -255,7 +255,7 @@ export const langDataMM = {
         logistics: {
             // Note: I've adapted the improved text to fit your original structure.
             duration: "သင်တန်းကာလ: ၂ လခွဲ (၁၀ ပတ်)",
-            schedule: "သင်ကြားမည့်ရက်: တစ်ပတ် ၃ ရက်",
+            schedule: "သင်ကြားမည့်ရက်: တစ်ပတ် ၃ ရက်၊ တစ်ရက် ၂ နာရီ",
             method: "သင်ကြားပုံစံ: Discord မှ Screen Share ဖြင့် တိုက်ရိုက်သင်ကြားမည်။",
             details: "သင်ခန်းစာလွတ်သွားပါက Telegram Group တွင် Record Video များဖြင့် ပြန်လည်လေ့လာနိုင်သည်။",
             assignments: "အပတ်စဉ် Assignment များ အားလုံးပြီးဆုံးပါက Certificate ချီးမြှင့်မည်။",
