@@ -276,14 +276,11 @@ export function Course() {
           className="text-center mb-12"
         >
           <h1 className="text-2xl md:text-4xl font-extrabold text-white mb-4">
-            🎮 Gaming Video Editing & 3D Animation Masterclass
+            🎮 Mastering Gaming Video Editing & 3D Animation (MLBB Base)
           </h1>
           <h2 className="text-lg md:text-xl text-gray-300 mb-6">
             (From Zero to Pro: Premiere Pro, After Effects & Blender)
           </h2>
-          <p className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto">
-            Gaming နယ်ပယ်မှာ Professional Editor တစ်ယောက်အဖြစ် ရပ်တည်နိုင်ဖို့နဲ့ အရည်အသွေးမြင့် Content တွေ ဖန်တီးနိုင်ဖို့ ဖြစ်ပါတယ်။
-          </p>
         </motion.div>
 
         {/* Divider */}
